@@ -1,0 +1,71 @@
+<view class="forget-phone">
+  <list>
+    <view slot="header">
+      原注册信息
+    </view>
+    <input-item
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="原企业名称"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+    >
+      原企业名称
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
+    </input-item>
+
+    <input-item
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="统一社会信用代码"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+
+    >
+      统一社会信用代码
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
+    </input-item>
+
+    <input-item
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="原法人姓名"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+    >
+      原法人姓名
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
+    </input-item>
+    <input-item
+      data-field="name"
+      placeholder="验证码"
+      type="text"
+      value="{{name}}"
+      clear="{{true}}"
+      onInput="onItemInput"
+      onClear="onClear"
+    >
+      原法人身份证号
+
+    </input-item>
+    
+  </list>
+  <view style="margin: 10px;">
+    <button type="primary" onTap="onAutoFocus">确认</button>
+  </view>
+</view>

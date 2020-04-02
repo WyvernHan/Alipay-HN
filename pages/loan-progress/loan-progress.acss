@@ -1,0 +1,113 @@
+.bg-fff {
+    background: #fff;
+}
+.gradual-bg {
+    background: linear-gradient(130deg, #40a8ff, #4b7ef3, #4763dd);
+    height: 190rpx;
+    padding: 20rpx;
+    color: #fff;
+}
+.gradual-bg .name {
+    margin: 40rpx 0 30rpx;
+    text-align: center;
+    font-size: 36rpx
+}
+
+.progress-box {
+    background: #fff;
+    border-radius: 20rpx;
+    height: 120rpx;
+    margin: -90rpx 40rpx 0;
+    display: flex;
+    padding: 30rpx 20rpx;
+    box-shadow: 0 0 8rpx 8rpx rgba(0, 0, 0, .02);
+}
+.progress-box .item {
+    flex: 1;
+}
+.progress-box .item .icon {
+    background: #e2f2ff;
+    border-radius: 50%;
+    width: 80rpx;
+    height: 80rpx;
+    margin: auto;
+    margin-bottom: 15rpx;
+    color: #64c4fe;
+    text-align: center;
+
+}
+.progress-box .item .icon .fa {
+    margin-top: 20rpx;
+    color: #64c4fe;
+    font-size: 40rpx;
+}
+.progress-box .item .icon.cur {
+    background: #ffebce;
+}
+.progress-box .item .icon.cur .fa {
+    color: #f6ba36;
+}
+.progress-box .item .text {
+    text-align: center;
+    color: #999;
+}
+.progress-box .fa-angle-right {
+    margin: 20rpx 20rpx 0;
+    font-size: 50rpx;
+    color: #dadada;
+}
+
+
+.info-box {
+    background: #fff;
+    padding: 20rpx 40rpx;
+}
+.info-box .title {
+    margin-bottom: 15rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.info-box .title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 1rpx;
+}
+.info-box .row {
+    display: flex;
+    padding: 15rpx 0;
+}
+.info-box .row text {
+    width: 140rpx;
+    color: #999;
+}
+.info-box .row > view {
+    flex: 1;
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

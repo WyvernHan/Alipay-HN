@@ -1,0 +1,43 @@
+.forget-phone {
+
+}
+
+.forget-phone .code {
+    position: absolute;
+    right: 40rpx;
+    top: 0rpx;
+    z-index: 99;   
+}
+
+.login-text {
+    width: 70%;
+    margin: 0 auto 20rpx;
+    display: flex;
+    font-size: 28rpx;
+}
+.register-text {
+    padding: 0 3vw;
+}
+
+.register-text text {
+    color: #46a4ff;
+}
+
+.bold {
+    font-weight: bold;
+    text-align: left;
+    text-indent: 2em;
+    margin-bottom: 20rpx;
+}
+.p {
+    text-indent: 2em;
+    text-align: left;
+    margin-bottom: 20rpx;
+}
+.register-width {
+    width: 80vw;
+    padding: 40rpx;
+}
+.atd-mobile-code button{
+  margin: 0 32rpx;
+}

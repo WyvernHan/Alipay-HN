@@ -1,0 +1,42 @@
+
+<view>
+  <view class="top-filter">
+    <view class="search">
+      <text class=" fa fa-search"></text>
+      <input
+        class="search-input"
+        placeholder="请输入机构名称"
+        value="{{search}}"
+        onConfirm="doneSearch"
+        onInput="handleSearch"
+      />
+    </view>
+    </view>
+  </view>
+
+  <scroll-view class="product-list" scroll-y="{{true}}" onScrollToLower="scrollMytrip">
+    <view a:for="{{list}}"  class="product-item">
+    <view onTap="gotoDetail" data-hi="{{item}}" class="product-item">
+        <view class="product-img">
+          <image mode="scaleToFill" src="{{item.logoUrl}}"/>
+        </view>
+        <view class="product-info">
+          <view class="product-name">
+            {{item.loginName}}
+          </view>
+          <view class="product-text">
+            入驻平台时间：{{item.establishDate}}
+          </view>
+          <view class="product-text">
+            放款总额（万元）：{{item.fkMoneyStr}}
+          </view>
+          <view class="product-text">
+            产品个数：
+            {{item.productNums}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+

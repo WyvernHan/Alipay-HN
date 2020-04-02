@@ -1,0 +1,193 @@
+<view>
+  <form onSubmit="onSubmit" onReset="onReset">
+  <list>
+    <input-item
+      name="quota"
+      className="dadada"
+      placeholder="融资金额(万元)"
+      value="{{loanMoney}}"
+    >
+      融资金额(万元)
+    </input-item>
+
+    <input-item
+      name="termValue"
+      className="dadada"
+      placeholder="请输入的融资期限"
+       value="{{loanTermValue}}"
+    >
+      融资期限
+    </input-item>
+    <picker-item data-field="termUnit" name="termUnit" value="{{loanTermUnit}}"  placeholder="选择融资期限单位" maxlength="2" onPickerTap="onPickerTap">
+          
+      期限单位
+    </picker-item>
+
+    <view class="am-picker-item ">
+      <view class="am-picker-line" style="border-bottom: rgb(245, 245, 245) solid 1rpx;">
+        <view class="am-picker-label">
+          担保方式
+        </view> 
+        <view class="am-picker-wrapper" style="height:auto;">
+          <checkbox-group onChange="onChange" name="guaranteeType">
+            <label a:for="{{guaranteeType}}" class="checkbox" key="label-{{index}}">
+              <checkbox value="{{item.value}},{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}" data-item-key="{{item.value}}" onChange="getGuaranteeType" />
+              <text>{{item.name}}</text>
+            </label>
+          </checkbox-group>
+        </view>
+      </view>
+    </view>
+    
+    <input-item
+      name="applyRaterange"
+      className="dadada"
+      placeholder="请输入期望的融资利率"
+    >
+      融资利率（%/年）
+    </input-item>
+
+  </list>
+
+  <list>
+    <view slot="header">
+      审核资料上传
+    </view>
+
+
+
+    <list>
+    <!--
+			<block>
+				<list-item
+					arrow= "true"
+					onClick="onItemClick"
+          className="list"
+				>
+          <text onTap="uploadUserFiles">上传证明</text>
+					<view slot="extra">
+						<text onTap="previewImage" data-fname="{{audits[index]}}" >查看附件</text>
+					</view>
+          <view slot="extra" class="upload" onTap="uploadUserFiles"></view>
+				</list-item>
+			</block>
+-->
+    <view class="file" >
+      <view class="file-list"  >
+            <input-item data-field="text"  disabled="disabled" >
+               <view >审核资料上传(非必填)</view>
+               <view slot="extra" class="extra" onTap="uploadUserFiles" ></view>
+            </input-item>
+
+            <view class="file-list-1" a:for-item="it2" a:for="{{fileObjList.listUploadFileRecord}}">
+                <view data-hr="{{it2.filePath}}" class="a"  onTap="dowFile"> <text class="file-name">{{it2.fileName}}</text> <text class="del" onTap="delFile" data-id="{{it2.id}}">删除</text></view>
+            </view>
+       </view>
+     </view>
+
+
+
+  </list>
+ 
+  <view style="margin: 10px;">
+    <button type="primary" formType="submit" >立即申请</button>
+  </view>
+  </form>
+  
+  
+  
+  
+  </view>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!--
+  
+  <view class="page-description">融资申请</view>
+  <view class="page-section">
+    <form onSubmit="onSubmit" onReset="onReset">
+      <view class="page-section">
+        <view class="form-row">
+          <view class="form-row-label">融资金额(万元)：</view>
+          <view class="form-row-content">
+            <input name="quota" class="input" value="{{loanMoney}}" maxlength="10"/>
+          </view>
+        </view>
+        <view class="form-line" />
+        <view class="form-row">
+          <view class="form-row-label">融资期限：</view>
+          <view class="form-row-content">
+            <input name="termValue" class="input"  value="{{loanTermValue}}" on maxlength="2"/>
+          </view>
+        </view>
+        <view class="form-line" />
+        <view class="form-row">
+          <view class="form-row-label">融资期限单位：</view>
+          <view class="form-row-content">
+           <picker-item data-field="termUnit" name="termUnit" value="{{loanTermUnit}}" placeholder="选择融资期限单位"  onPickerTap="onPickerTap">
+          </picker-item>
+          </view>
+        </view>
+
+        <!--<view class="form-line" />
+        <view class="form-row">
+          <view class="form-row-label">担保方式：</view>
+          <view class="form-row-content">
+            <input class="input" disabled="disabled" value="{{guaranteeTypeList}}" />
+          </view>
+        </view>
+       <view class="form-line" />
+        <view class="form-row">
+          <view class="form-row-label">担保方式：</view>
+          <view class="form-row-content">
+             <checkbox-group onChange="onChange" name="guaranteeType">
+            <label a:for="{{dicguaranteeType}}" class="checkbox" key="label-{{index}}">
+              <checkbox value="{{item.value}}" checked="{{item.checked}}" disabled="{{item.disabled}}" data-item-key="{{item.value}}" onChange="getGuaranteeType" />
+              <text>{{item.name}}</text><!-- onChange="getGuaranteeType" 
+            </label>
+          </checkbox-group>
+          </view>
+        </view>
+        <view class="form-line" />
+        <view class="form-row">
+          <view class="form-row-label">融资利率（%/年）：</view>
+          <view class="form-row-content">
+            <input name="applyRaterange" class="input"  maxlength="3"/>
+          </view>
+        </view>
+         <view class="form-line" />
+      </view>
+     
+      <view class="btn-min">
+        <button type="primary" onTap="uploadUserFiles" >上传证明</button><!-- onTap="queryLoanInfo"
+      </view>
+
+       <view class="btn-min">
+        <button type="primary" formType="submit">提交</button><!-- onTap="queryLoanInfo" 
+      </view>
+    </form>
+    <!--融资服务申请信息 {{loanMoney}},{{loanTermValue}},{{loanTermUnit}},{{guaranteeType}}
+    <button size="default" type="primary" onTap="chooseImg">上传证明</button>
+    <view  a:if="{{userImageList!=''}}">
+        <view onTap="previewImage"> 查看附件</view>
+      </view>
+  
+  </view>
+-->

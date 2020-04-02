@@ -1,0 +1,47 @@
+<view>
+  <view style="margin-top: 10px;" />
+  <list>
+    <input-item value="{{tel}}" disabled="disabled">法人代表电话号</input-item>
+    
+    <input-item type="text" name="loginName" disabled="disabled" controlled="{{true}}" value="{{loginName}}">企业名称</input-item>
+
+    <input-item type="text" name="license" disabled="disabled" controlled="{{true}}" value="{{license}}">统一社会信用代码</input-item>
+
+    <input-item type="text" name="companyType" disabled="disabled" controlled="{{true}}" value="{{companyType}}">企业类型</input-item>
+    
+    <input-item type="text" name="corporate" disabled="disabled" controlled="{{true}}" value="{{corporate}}">法人代表</input-item>
+
+    <input-item type="idcard" name="corporateIDcard" disabled="disabled" controlled="{{true}}" value="{{corporateIDcard}}">法人代表身份证号</input-item>
+    
+    <list-item className="list">
+      <text>营业执照</text>
+    </list-item>
+    <view class="file-list-1">
+        <view class="a" onTap="saveLicenseImage" a:if="{{licensePic!=''}}">
+          <text class="file-name">{{licensePic.substring(licensePic.lastIndexOf("/")+1,licensePic.length)}}</text>
+        </view>
+        <view a:else>
+          <text>您还未上传营业执照，请维护您的企业信息！</text>
+        </view>
+    </view>
+    <list-item className="list">
+      <text>法人身份证</text>
+    </list-item>
+    <view class="file-list-1">
+      <view class="a" onTap="saveIdCardImage" a:if="{{corporateIDcardPic!=''}}">
+        <text class="file-name">{{corporateIDcardPic.substring(corporateIDcardPic.lastIndexOf("/")+1,corporateIDcardPic.length)}}</text>
+      </view>
+      <view a:else>
+        <text>您还未上传法人身份证，请维护您的企业信息！</text>
+      </view>
+    </view>
+
+    <input-item value="{{checkState}}" disabled="disabled">资料审核结果</input-item>
+
+    <input-item value="手机人脸审核" disabled="disabled" a:if="{{checkOrigin=='1'}}">审核来源</input-item>
+    <input-item value="PC运营审核" disabled="disabled" a:else>审核来源</input-item>
+  </list>
+  <view style="margin: 10px;">
+    <button type="primary" onTap="onSubmit">修改</button>
+  </view>
+</view>

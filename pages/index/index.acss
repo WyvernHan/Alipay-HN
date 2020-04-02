@@ -1,0 +1,276 @@
+
+.page-section-demo {
+  width: 100%;
+}
+.swiper-item{
+  display: block;
+  height: 300rpx;
+  background-color:#e0ffff;
+}
+.margin-t {
+  margin-top: 24px;
+}
+
+.overview {
+  padding: 10rpx;
+}
+.overview .row {
+  display: flex;
+}
+.overview .item {
+  background: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  padding: 20rpx;
+  margin: 10rpx;
+  flex: 1;
+}
+.overview .item .text {
+  flex: 1;
+  color: #b8b8b8;
+}
+.overview .item .text view {
+  margin-top:5rpx;
+}
+.overview .item .text .num {
+  color: #666;
+  font-size: 34rpx;
+}
+.overview .item image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.service {
+  padding: 20rpx;
+}
+.service .title {
+    margin-bottom: 15rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.service .title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 1rpx;
+}
+.service .service-box {
+  border-radius: 10rpx;
+}
+.service .service-box .blue {
+  background: url(../../image/index-blue.jpg) bottom;
+  background-size:cover ;
+  border-radius: 10rpx 10rpx 0 0;
+  height: 400rpx;
+  padding: 40rpx;
+}
+.service .service-box .blue .input-item {
+  background: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.service .service-box .blue .check-item {
+  display: flex;
+  color: #fff;
+  align-items: center;
+  white-space: nowrap;
+  font-size: 22rpx;
+}
+.service .service-box .blue .check-item > text {
+  white-space: nowrap;
+}
+.service .service-box .blue .check-item label {
+  margin-right: 10rpx;
+}
+.service .service-box .blue .check-item checkbox {
+  background: #fff;
+  transform: scale(.5, .5);
+  position: relative;
+  top: 2rpx;
+  margin-left: -5rpx;
+}
+.service .service-box .blue .check-item  label text {
+  position: relative;
+  top: -7rpx;
+  margin-left: -5rpx;
+}
+.service .service-box .blue button {
+  background: #ffb339;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+}
+.service .service-box .white {
+  background: #fff;
+  border-radius:  0 0 10rpx 10rpx;
+  height: 40rpx;
+  padding: 30rpx 40rpx;
+}
+.service .service-box .white .row {
+  display: flex;
+  line-height: 150%;
+  white-space: nowrap;
+}
+.service .service-box .white .row .tag {
+  padding: 0 10rpx;
+  margin-right: 10rpx;
+  color: #fff;
+  white-space: nowrap;
+}
+.service .service-box .white .row .tag.green {
+  background: #12b2ca;
+}
+.service .service-box .white .row .tag.red {
+  background: #fe715f;
+}
+.service .service-box .white .row .text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.service .service-box .white .row .time {
+  color: #ccc;
+  white-space: nowrap;
+  text-align: right;
+  margin-left: 10rpx;
+}
+
+.hot {
+  padding: 20rpx;
+}
+.hot .title {
+    margin-bottom: 15rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.hot .title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 1rpx;
+}
+.hot .hot-box {
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+.hot .hot-box .scroll {
+  white-space: nowrap;
+}
+.hot .hot-box .scroll image {
+  background: #4b7ef3;
+  height: 120rpx;
+  width: 240rpx;
+  margin-right: 20rpx;
+}
+.hot .hot-box .items {
+  padding: 20rpx 0;
+}
+.hot .hot-box .items .item {
+  width: 100%;
+  border-bottom: 1rpx dashed #ddd;
+  margin-right:20rpx;
+  padding: 20rpx 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+.hot .hot-box .items .item:last-child {
+   margin-right:0;
+   border-right: none;
+}
+.hot .hot-box .items .item .top {
+  display: flex;
+}
+.hot .hot-box .items .item .img {
+  background: #4b7ef3;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+}
+.hot .hot-box .items .item .name {
+  margin: 5rpx 0;
+}
+.hot .hot-box .items .item .num {
+  color: #f99e12;
+  font-size: 32rpx;
+}
+.hot .hot-box .items .item .img image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+}
+.hot .hot-box .items .item .top {
+  flex: 1;
+}
+.hot .hot-box .items .item .bottom {
+  flex: 1;
+  padding: 10rpx 0;
+  color: #999;
+  font-size: 24rpx;
+  line-height: 150%;
+}
+.swiper_container {
+  height: 55rpx;
+  width: 80vw;
+}
+
+.swiper_item {
+  font-size: 25rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  letter-spacing: 2px;
+}
+.am-input-clear.hidden {
+  display: none;
+}
+.am-modal-body {
+  overflow: visible;
+}
+.am-modal {
+  border-radius: 10rpx;
+}
+.popup {
+  width: 450rpx;
+}
+.pop-img {
+  width: 300rpx;
+  height: 285rpx;
+  margin-top: -140rpx;
+  margin-bottom: 20rpx;
+}
+.popup .header {
+  font-size: 40rpx;
+  margin-bottom: 50rpx;
+}
+.popup .p {
+  font-size: 26rpx;
+  margin-bottom: 20rpx;
+}
+.popup .button {
+  background: url(../../image/btn.png) no-repeat;
+  background-size: contain;
+  width: 304rpx;
+  height: 90rpx;
+  line-height: 75rpx;
+  margin: 50rpx auto 40rpx;
+  color: #fff;
+}

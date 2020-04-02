@@ -1,0 +1,21 @@
+<view>
+  <view class="product-overview">
+    <view class="gradual-bg">
+      <view class="product-name">
+        <image mode="scaleToFill" src="{{logoUrl}}"/> <text> {{loginName}}</text>
+        
+      </view>
+    </view>
+  </view>
+
+  <view class="product-describe">
+    <view class="title">
+      <text></text> 金融机构简介
+    </view>
+    <view class="p">
+        {{introduction}}
+    </view>
+
+
+  </view>
+</view>

@@ -1,0 +1,85 @@
+
+<import src="../../wxParse/wxParse.axml"/>
+<view>
+          <tabs
+            tabs="{{tabs}}"
+            showPlus="{{false}}"
+            onTabClick="handleTabClick"
+            onChange="handleTabChange"
+            onPlusClick="handlePlusClick"
+            activeTab="{{activeTab}}"
+            swipeable="{{false}}"
+          >
+            <block a:for="{{tabs}}">
+              <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:if="{{index === 0}}">
+                
+                   <scroll-view class="news-list" scroll-y="{{true}}" onScrollToLower="xwzx_scrollMytrip">
+                      <view a:for="{{xwzx_list}}"  class="product-item">
+                          <view class="news-item" onTap="rzzc_click" data-rz="{{item}}">
+                            <view class="news-title">
+                              {{item.title}}
+                            </view>
+                            <view class="news-outline">
+                              <view class="news-content">
+                                <view class="text">
+                                
+                                </view>
+                                <view class="date">
+                                  {{item.releaseTimeStr}}
+                                </view>
+                              </view>
+                              <view class="img">
+                                <image mode="scaleToFill" src="{{item.imgurl}}"/>
+                              </view>
+                            </view>
+                          </view>
+                      </view>
+                      
+                    </scroll-view>
+              </tab-content>
+              <tab-content  key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 2}}">
+                  <view class="news-header">
+                    <view class="news-title">
+                      {{gywm_list.title}}
+                    </view>
+                    <!--
+                    <view>
+                       {{gywm_list.releaseTimeStr}}
+                    </view>
+                    -->
+                  </view>
+                  <view class="news-content">
+                    <view class="p">
+                       <template is="wxParse" data="{{wxParseData:gywm.nodes}}">
+                    </view>
+                  </view>
+              </tab-content>
+              <tab-content key="{{index}}" tabId="{{index}}" activeTab="{{activeTab}}" a:elif="{{index === 1}}">
+                
+                <scroll-view class="policy-list" scroll-y="{{true}}" onScrollToLower="scrollMytrip">
+                      <view a:for="{{rzzc_list}}"  class="product-item">
+                          <view class="news-item" onTap="rzzc_click" data-rz="{{item}}">
+                            <view class="news-title">
+                              {{item.title}}
+                            </view>
+                            <view class="news-outline">
+                              <view class="news-content">
+                                <view class="text">
+                                
+                                 <template is="wxParse" data="{{wxParseData:article.nodes}}">
+                                </view>
+                                <view class="date">
+                                  {{item.releaseTimeStr}}
+                                </view>
+                              </view>
+                            </view>
+                          </view>
+                      </view>
+                      
+                    </scroll-view>
+ 
+              </tab-content>
+            </block>
+          </tabs>
+      </view>
+  

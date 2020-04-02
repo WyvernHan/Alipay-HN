@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "隐私政策",
+  "usingComponents": {
+    "page-result": "mini-antui/es/page-result/index",
+    "message": "mini-antui/es/message/index"
+  }
+}

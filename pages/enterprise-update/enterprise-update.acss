@@ -1,0 +1,65 @@
+.extra {
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/dOfSJfWQvYdvsZiJStvg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.5;
+  height: 20px;
+  width: 20px;
+  padding-left: 10px;
+}
+.am-list-extra {
+  position: relative;
+  overflow: visible;
+}
+.am-list-arrow {
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/dOfSJfWQvYdvsZiJStvg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.5;
+  height: 20px;
+  width: 20px;
+  padding-left: 10px;
+}
+.upload {
+  height: 20px;
+  width: 20px;
+  padding-left: 10px;
+  position: absolute;
+  right: -40px;
+  top: 7px;
+  z-index: 99;
+}
+
+.list * {
+    font-size:26rpx; 
+}
+.list image {
+    height: 36rpx;
+    width: 36rpx;
+    opacity: 0.5;
+}
+.file-list-1 {
+    background: #fff;
+    padding: 10rpx 25rpx;
+    border-bottom: rgb(248, 248, 248) solid 1rpx;
+}
+.file-list-1 .a {
+    padding: 7rpx 0;
+    display: flex;
+    color: #3aa8ff;
+    text-decoration: underline;
+}
+.file-list-1 .a .file-name {
+    flex: 1;
+}
+.tips-idcard {
+    color: #ff3232;
+    font-size: 22rpx;
+}
+.tips {
+    color: #ff3232;
+    font-size: 22rpx;
+    padding: 20rpx 25rpx;
+}

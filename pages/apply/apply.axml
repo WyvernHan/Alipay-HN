@@ -1,0 +1,152 @@
+<view class="forget-other">
+  <view class="product-overview">
+    <view class="gradual-bg">
+
+       <view class="product-name">
+        <image mode="scaleToFill" src="{{picurl}}"/>
+        {{etpsName}}·{{financingPurpose}}
+      </view>
+
+      <view class="text">
+        参考利率范围 (%/年)
+      </view>
+      <view class="num">
+       {{raterangeMinStr}}-{{raterangeMaxStr}}
+      </view>
+      <view class="text small">
+         融资额度：{{quotaMinStr}}-{{quotaMaxStr}}（万元） | 融资期限: {{termValueMin}}-{{termValueMax}}{{termUnitName}}
+      </view>
+    </view>
+    <view class="product-info">
+      <view class="row">
+        <text>产品类别</text>
+         <view>
+          <view class="tag">
+              {{financingName1}}<block a:if="{{financingName2.length>0}}">-{{financingName2}}</block><block a:if="{{financingName3.length>0}}">-{{financingName3}}</block>
+          </view> 
+        </view>
+      </view>
+      <view class="row">
+        <text>担保方式</text>
+        <view>
+          <view a:for="{{guaranteeModeList}}">
+            <view class="tag"  >
+              {{item.name}}
+            </view>
+          </view>
+        </view>
+        
+      </view>
+    </view>
+  </view>
+  
+
+
+  <form onSubmit="onSubmit" onReset="onReset">
+  <list>
+  
+    <view slot="header">
+      融资申请信息
+    </view>
+    <input-item
+      name="quota"
+      clear="{{true}}"
+      className="dadada"
+      placeholder="请输入期望的融资金额"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+      maxlength="10"
+    >
+      期望融资金额（万元）
+    </input-item>
+
+    <input-item
+      name="termValue"
+      clear="{{true}}"
+      className="dadada"
+      placeholder="请输入期望的融资期限"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+    >
+      期望融资期限
+    </input-item>
+  <picker-item data-field="termUnit" name="termUnit" value="{{termUnit}}"  placeholder="选择融资期限单位" maxlength="2" onPickerTap="onPickerTap">
+         
+      期限单位
+ </picker-item>
+    <input-item
+      name="applyRaterange"
+      clear="{{true}}"
+      className="dadada"
+      placeholder="请输入期望的融资利率"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+    >
+      期望融资利率（%/年）
+    </input-item>
+  
+
+  </list>
+
+  <list>
+    <view slot="header">
+      审核资料上传
+    </view>
+
+
+
+    <list>
+    <!--
+			<block a:for="{{auditsName}}">
+				<list-item
+					arrow= "true"
+					onClick="onItemClick"
+					index="itemsThumb-{{index}}"
+					last="{{index === (itemsThumb.length - 1)}}"
+					key="itemsThumb-{{index}}"
+          className="list"
+				>
+          <text onTap="uploadUserFiles" data-fname="{{audits[index]}}">{{item}}</text>
+					<view slot="extra">
+						<text onTap="previewImage" data-fname="{{audits[index]}}" >查看附件</text>
+					</view>
+          <view slot="extra" class="upload" onTap="uploadUserFiles" data-fname="{{audits[index]}}"></view>
+				</list-item>
+			</block>
+    -->
+     <view class="file" >
+      <view a:for="{{fileObjList}}" class="file-list" a:for-item="it1" >
+            <input-item data-field="text" disabled="disabled" >
+               <view >{{it1.name}}:</view>
+               <view slot="extra" class="extra" onTap="uploadUserFiles" data-fname="{{it1.ftype}}"></view>
+            </input-item>
+
+            <view class="file-list-1" a:for-item="it2" a:for="{{it1.listUploadFileRecord}}">
+                <view class="a" > <text  data-hr="{{it2.filePath}}"  onTap="dowFile" class="file-name">{{it2.fileName}}</text> <text class="del" onTap="delFile" data-id="{{it2.id}}">删除</text></view>
+            </view>
+       </view>
+     </view>
+
+
+
+  </list>
+ 
+  <view style="height:100rpx;">
+    <button type="primary"   class="fixed-btn" formType="submit" >立即申请</button>
+  </view>
+  </form>
+</view>
+
+

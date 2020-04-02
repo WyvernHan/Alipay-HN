@@ -1,0 +1,80 @@
+.conditions {
+    padding: 20rpx 40rpx;
+    white-space: nowrap;
+}
+.conditions .tag {
+    background: #fff;
+    border-radius: 25rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-right: 20rpx;
+    padding: 0 30rpx;
+    display: inline-block;
+    color: #8c8c8c;
+}
+.conditions .tag .fa.before {
+    margin-right: 10rpx;
+    color: #2594ff;
+}
+
+.conditions .tag  .fa-times {
+    position: relative;
+    right: -10rpx;
+    color: #d9d9d9;
+}
+
+
+.filter-wrap {
+    background: #fff;
+}
+.page-section-demo {
+    border:#e8e8e8 solid 1rpx;
+    padding: 20rpx 40rpx;
+}
+.page-section-demo button.primary {
+    float: right;
+
+}
+
+.filter-box {
+    padding: 0 40rpx;
+}
+.filter-box .filter-li {
+    border-bottom: #e8e8e8 dashed 1rpx;
+    padding: 40rpx 20rpx 20rpx;
+}
+.filter-box .filter-li .title {
+    font-size: 30rpx;
+    color: #8c8c8c;
+}
+.filter-box .filter-li .title .fa {
+    margin-right: 10rpx;
+    color: #46a8ff;
+}
+.filter-box .filter-li .filter-items {
+    padding: 15rpx 0 0;
+}
+.filter-box .filter-li .filter-items .item {
+    background: #f5f5f5;
+    border: #f5f5f5 solid 1rpx;
+    border-radius: 25rpx;
+    display: inline-block;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+    padding: 0 15rpx;
+    color: #b8b8b8;
+}
+.filter-box .filter-li .filter-items .item.cur {
+    background: #66baff;
+    border: #3fa9ff solid 1rpx;
+    color: #fff;
+}
+
+
+
+
+
+
+

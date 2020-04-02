@@ -1,0 +1,19 @@
+<import src="../../wxParse/wxParse.axml"/>
+<view>
+  <view class="news-header">
+    <view class="news-title">{{content.title}}</view>
+    <view class="news-source">{{content.releaseTimeStr}}</view>
+  </view>
+  <view  style="background:rgb(255, 255, 255)" >
+   
+       <template is="wxParse" data="{{wxParseData:article.nodes}}">
+   
+  </view>
+  <view class="news-content">
+    <view class="p">
+      <view a:for="{{content.annexList}}" class="a">
+        <view class="a" onTap="dowFile" data-hr="{{item.value}}">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

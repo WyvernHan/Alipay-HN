@@ -1,0 +1,349 @@
+<view>
+  <view class="enterprise-info">
+    <view class="avatar">
+      <image mode="scaleToFill" src="../../image/companyImage.png"></image>
+    </view>
+    <view class="info">
+      <view class="name">{{applyInfo.result.etprsName}}</view>
+      <view class="code">统一社会信用代码：{{applyInfo.result.socialCredit}}</view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="title">
+      <view class="icon">
+        <text class="fa fa-window-maximize"></text>
+      </view>
+      <view class="text">需求基本信息</view>
+    </view>
+    <view class="flex-list">
+      <view class="item">
+        <view class="val">{{applyInfo.result.applyQuotaStr}}</view>
+        <view class="key">融资金额(万元)</view>
+      </view>
+      <view class="item">
+        <view class="val">{{applyInfo.result.applyTermValue}}{{applyInfo.result.termUnitName}}</view>
+        <view class="key">贷款期限</view> 
+      </view>
+      <view class="item">
+        <view class="val">{{applyInfo.result.applyRaterangeStr}}</view>
+        <view class="key">利率(%/年)</view>
+      </view>
+      <view class="item">
+        <view class="val">
+          <text>{{applyInfo.result.paStatusStr}}</text>
+        </view>
+        <view class="key">合作进度</view>
+      </view>
+    </view>
+
+    <!--资料补充-->
+    <view class="file" a:if="{{applyInfo.paStatus=='3'}}">
+       <view class="sub-title">审核结果：拒绝</view>
+       <view class="sub-title">审核意见：</view>
+       <view class="tex">{{applyInfo.result.auditOpinion}}</view>
+      <view class="sub-title">申请资料</view>
+      <view a:for="{{applyInfo.listUploadFileRecord}}" class="file-list" a:for-item="it1" >
+            <input-item data-field="text" disabled="disabled" >
+               <view a:if="{{it1.name.length>0}}">{{it1.name}}:</view>
+               <view slot="extra" class="extra" onTap="uploadUserFiles" data-filetype="{{it1.value}}"></view>
+            </input-item>
+
+            <view class="file-list" a:for-item="it2" a:for="{{it1.listUploadFileRecord}}">
+                <view class="a" > <text  onTap="dowFile"  data-hr="{{it2.filePath}}" class="file-name">{{it2.fileName}}</text> <text class="del"  onTap="delFile" data-id="{{it2.id}}">删除</text></view>
+            </view>
+       </view>
+        <button type="primary" onTap="bcSum" >确认提交</button>
+     </view>
+     <!--展示资料-->
+    <view class="file" a:if="{{applyInfo.paStatus!='3'}}">
+      <view class="sub-title">申请资料</view>
+      <view a:for="{{applyInfo.listUploadFileRecord}}" class="file-list" a:for-item="it1" >
+            <input-item data-field="text" disabled="disabled" >
+               <view a:if="{{it1.name.length>0}}">{{it1.name}}:</view>
+            </input-item>
+
+            <view class="file-list" a:for-item="it2" a:for="{{it1.listUploadFileRecord}}">
+                <view data-hr="{{it2.filePath}}" class="a"  onTap="dowFile"> <text class="file-name">{{it2.fileName}}</text> </view>
+            </view>
+       </view>
+       
+     </view>
+
+
+  <!-- 信用分
+   <view class="score">
+            <view class="sub-title">信用分：{{applyInfo.result.companyGrade}}</view>
+   </view>
+   -->
+  </view>
+
+  <!--产品基本信息-->
+
+  <view class="box"  a:if="{{applyInfo.pi!=undefined}}">
+    <view class="title">
+      <view class="icon">
+        <text class="fa fa-window-maximize"></text>
+      </view>
+      <view class="text">产品基本信息</view>
+    </view>
+    <view class="table">
+      <view class="table-list">
+
+        <view class="item">
+          <view>
+            金融机构名称：
+          </view>
+          <text> {{applyInfo.pi.etpsName}}</text>
+        </view>
+        <view class="item">
+          <view>
+            产品名称：
+          </view>
+          <text>{{applyInfo.pi.financingPurpose}}</text>
+        </view>
+        <view class="item">
+          <view>
+            贷款额度(万元)：
+          </view>
+          <text>{{applyInfo.pi.quotaMinStr}} - {{applyInfo.pi.quotaMaxStr}}</text>
+        </view>
+
+        <view class="item">
+          <view>          
+            参考利率范围(%/年)：
+          </view>
+          <text>{{applyInfo.pi.raterangeMinStr}} - {{applyInfo.pi.raterangeMaxStr}}</text>
+        </view>
+
+        <view class="item">
+          <view> 
+            担保方式：
+          </view>
+         <text a:for="{{applyInfo.pi.guaranteeModeList}}">
+            {{item.name}}<text a:if="{{(index+1)<applyInfo.pi.guaranteeModeList.length}}">、</text>
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <!--授信基本信息-->
+  <view class="box" a:if="{{applyInfo.result.creditContractNo.length>0}}">
+    <view class="title">
+      <view class="icon">
+        <text class="fa fa-window-maximize"></text>
+      </view>
+      <view class="text">授信基本信息</view>
+    </view>
+
+    <view class="table">
+      <view class="table-list">
+        <view class="item">
+          <view>
+            授信合同号：
+          </view>
+          <text>{{applyInfo.result.creditContractNo}}</text>
+        </view>
+        <view class="item">
+          <view>
+            授信金额(万元)：
+          </view>
+          <text>{{applyInfo.result.creditMoneyStr}}</text>
+        </view>
+        <!--
+        <view class="item">
+          <view>
+            授信余额(万元)：
+          </view>
+          <text>{{applyInfo.result.creditBalanceStr}}</text>
+        </view>
+        -->
+        <view class="item">
+          <view>          
+            授信开始日期：
+          </view>
+          <text>{{applyInfo.result.creditStartDateStr}}</text>
+        </view>
+
+        <view class="item">
+          <view> 
+            授信结束日期：
+          </view>
+         <text>
+            {{applyInfo.result.creditEndDateStr}}
+          </text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!--放款基本信息-->
+  <view class="box" a:if="{{applyInfo.result.loanContractNo.length>0}}">
+    <view class="title">
+      <view class="icon">
+        <text class="fa fa-window-maximize"></text>
+      </view>
+      <view class="text">放款基本信息</view>
+    </view>
+
+    <view class="table">
+      <view class="table-list">
+        <view class="item">
+          <view>
+            放款金额(万元)：
+          </view>
+          <text>{{applyInfo.result.money}}</text>
+        </view>
+        <view class="item">
+          <view>
+            放款时间：
+          </view>
+          <text>{{applyInfo.result.loanDateStr}}</text>
+        </view>
+
+        <view class="item">
+          <view>          
+            放款合同号：
+          </view>
+          <text>{{applyInfo.result.loanContractNo}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--还款基本信息-->
+  <view class="box" a:if="{{applyInfo.RepaymentScheduleList.length>0}}">
+    <view class="title">
+      <view class="icon">
+        <text class="fa fa-window-maximize"></text>
+      </view>
+      <view class="text">还款基本信息</view>
+    </view>
+    <view class="ul">
+      <view a:for=" {{applyInfo.RepaymentScheduleList}}" class="li ">
+        <view class="row">
+          <view>期次：</view>
+          <text>{{item.repaymentPeriod}}</text>
+        </view>
+
+        <view class="row" a:if="{{item.repaymentStatusStr==''}}">
+          <view>还款状态：</view>
+          <text>未还款</text>
+        </view>
+
+        <view class="row" a:if="{{item.repaymentStatusStr!=''}}">
+          <view>还款状态：</view>
+          <text>{{item.repaymentStatusStr}}</text>
+        </view>
+
+
+        <view class="row">
+          <view>还款利息(元)：</view><text>{{item.planRepaymentInterestStr}}</text>
+        </view>
+
+        <view class="row">
+          <view>实际还款利息(元)：</view><text>{{item.actualRepaymentInterestStr}}</text>
+        </view>
+
+        <view class="row">
+          <view style="flex:1.5">还款时间：</view><text>{{item.planRepaymentTimeStr}}</text>
+        </view>
+        
+        <view class="row">
+          <view style="flex:1.5">实际还款时间：</view><text>{{item.actualRepaymentTimeStr}}</text>
+        </view>
+
+        <view class="row">
+           <view style="flex:1.5">还款本金(元)：</view><text>{{item.planRepaymentAmountStr}}</text>
+        </view>
+
+        <view class="row">
+          <view style="flex:1.5">实际还款本金(元)：</view><text>{{item.actualRepaymentAmountStr}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--结项基本信息-->
+  <view class="box" a:if="{{applyInfo.result.nodalStatusStr.length>0}}">
+    <view class="title">
+      <view class="icon">
+        <text class="fa fa-window-maximize"></text>
+      </view>
+      <view class="text">结项情况信息</view>
+    </view>
+    <view class="table">
+      <view class="table-list">
+        <view class="item">
+          <view>
+            结项状态：
+          </view>
+          <text>{{applyInfo.result.nodalStatusStr}}</text>
+        </view>
+        <view class="item">
+          <view>
+            结项时间：
+          </view>
+          <text>{{applyInfo.result.nodalTimesStr}}</text>
+        </view>
+         <view class="item" a:if="{{applyInfo.result.nodalStatusStr!='正常结项'}}" >
+          <view>
+            损失金额(元)：
+          </view>
+          <text>{{applyInfo.result.nodalMoneyStr}}</text>
+        </view>
+        <view class="item" style="display:block;">
+          <view style="margin-bottom:5rpx;">
+           结项意见：
+          </view>
+          <text>{{applyInfo.result.nodalContent}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+   <!--客户评价-->
+  <view class="box" a:if="{{applyInfo.paStatus=='18'||applyInfo.paStatus=='16'}}">
+    <view class="title">
+      <view class="icon">
+        <text class="fa fa-window-maximize"></text>
+      </view>
+      <view class="text">客户评价</view>
+    </view>
+    <view class="evaluate">
+        <form onSubmit="bindFormSubmit">
+            <view class="item">
+              <text >评价级别：</text>
+               <text a:if="{{applyInfo.result.evaluationeveLevel==0}}">
+                  <text class="{{xclass[0]}}"  onTap="xset" data-xvalue="1" ></text>
+                  <text class="{{xclass[1]}}"  onTap="xset" data-xvalue="2"></text>
+                  <text class="{{xclass[2]}}"  onTap="xset" data-xvalue="3"></text>
+                  <text class="{{xclass[3]}}"  onTap="xset" data-xvalue="4"></text>
+                  <text class="{{xclass[4]}}"  onTap="xset" data-xvalue="5"></text>
+                </text>
+                 <text a:if="{{applyInfo.result.evaluationeveLevel>0}}">
+                  <text class="{{xclass[0]}}"   data-xvalue="1" ></text>
+                  <text class="{{xclass[1]}}"   data-xvalue="2"></text>
+                  <text class="{{xclass[2]}}"   data-xvalue="3"></text>
+                  <text class="{{xclass[3]}}"   data-xvalue="4"></text>
+                  <text class="{{xclass[4]}}"   data-xvalue="5"></text>
+                </text>
+            </view>
+
+            <view class="item" >
+              <text style="white-space:nowrap;">评价内容：</text>
+              <textarea style="width: 100%;" placeholder="请输入" maxlength=200  a:if="{{applyInfo.result.evaluationContent.length==0}}"   name="textarea" disabled="{{applyInfo.result.evaluationeveLevel>0}}" value="{{applyInfo.result.evaluationContent}}"></textarea>
+              <text  a:if="{{applyInfo.result.evaluationContent.length>0}}" >{{applyInfo.result.evaluationContent}}</text>
+            </view>
+
+
+            <view class="item" a:if="{{applyInfo.result.evaluationContent.length==0}}">
+              <button type="primary" form-type="submit" >提交评价</button>
+            </view>
+        </form>
+    </view>
+  </view>
+</view>

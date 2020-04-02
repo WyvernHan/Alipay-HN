@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "pullRefresh": true,
+  "usingComponents": {
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index",
+    "tips-dialog": "mini-antui/es/tips/tips-dialog/index",
+    "tips-plain": "mini-antui/es/tips/tips-plain/index",
+    "input-item": "mini-antui/es/input-item/index",
+    "picker-item": "mini-antui/es/picker-item/index",
+    "popover-item": "mini-antui/es/popover/popover-item/index",
+    "notice": "mini-antui/es/notice/index",
+    "am-icon": "mini-antui/es/am-icon/index",
+    "grid": "mini-antui/es/grid/index",
+    "modal": "mini-antui/es/modal/index"
+  },
+  "defaultTitle": "海南自贸港金融服务平台"
+}

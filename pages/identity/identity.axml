@@ -1,0 +1,72 @@
+<view>
+  <view style="margin-top: 10px;" />
+  <list>
+    <input-item
+      data-field="cardNo"
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="企业名称"
+    >
+      企业名称
+    </input-item>
+    <input-item
+      data-field="cardNo"
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="组织机构代码"
+    >
+      组织机构代码
+    </input-item>
+    <picker-item
+      data-field="bank"
+      placeholder="选择企业注册地"
+      value="{{bank}}"
+      onPickerTap="onPickerTap"
+    >
+      企业注册地
+    </picker-item>
+    <view style="margin: 20rpx;"></view>
+    <input-item
+      data-field="name"
+      placeholder="法定代表人姓名"
+      type="text"
+      value="{{name}}"
+      clear="{{true}}"
+      onInput="onItemInput"
+      onClear="onClear"
+    >
+      法定代表人姓名
+    </input-item>
+    <input-item
+      data-field="password"
+      placeholder="法定代表人身份证号"
+    >
+      法定代表人身份证号
+    </input-item>
+    <input-item
+      data-field="password"
+      placeholder="联系人姓名"
+    >
+      联系人姓名
+    </input-item>
+
+    <input-item
+      data-field="password"
+      placeholder="联系人身份证号"
+    >
+      联系人身份证号
+    </input-item>
+
+    <input-item
+      data-field="password"
+      placeholder="联系人电话"
+    >
+      联系人电话
+    </input-item>
+  </list>
+  <view style="margin: 20rpx;">
+    <button type="primary" onTap="onAutoFocus">下一步</button>
+  </view>
+</view>

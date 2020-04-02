@@ -1,0 +1,266 @@
+
+.title {
+    border-bottom: #e8e8e8 solid 1rpx;
+    padding: 20rpx 40rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 1rpx;
+}
+.page-section .row {
+    width: 100%;
+}
+.form-row,
+.page-section {
+    border-bottom: #e8e8e8 solid 1rpx;
+    padding: 20rpx 40rpx;
+    display: flex;
+    align-items: center;
+    line-height: 40rpx;
+}
+.page-section .row {
+    display: flex;
+    align-items: center;
+    line-height: 40rpx;
+}
+.form-row:last-child {
+    border-bottom: none;
+}
+.form-row-label,
+.page-section .row .row-title {
+    width: 200rpx;
+    height: 40rpx;
+    color: #999;
+}
+.form-row-content {
+    height: 40rpx;
+    flex: 1;
+    text-align: right;
+}
+.form-row-content input,
+.form-row-content view,
+.page-section .row .row-extra {
+    height: 40rpx;
+    font-size: 26rpx;
+    color: #999;
+}
+
+.page-section .row {
+    width: calc(100vw - 80rpx);
+     display: flex;
+}
+.page-section .row .row-extra {
+    flex: 1;
+    display: block;
+    text-align: right;
+}
+
+.fixed-btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.extra {
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/dOfSJfWQvYdvsZiJStvg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.7;
+  height: 20px;
+  width: 20px;
+  padding-left: 10px;
+  float: left;
+}
+
+.list * {
+    font-size:26rpx; 
+}
+.list image {
+    height: 36rpx;
+    width: 36rpx;
+    opacity: 0.5;
+}
+
+.gradual-bg {
+    background: linear-gradient(130deg, #40a8ff, #4b7ef3, #4763dd);
+    padding: 20rpx;
+    color: #fff;
+}
+.gradual-bg .product-name {
+    margin-bottom: 45rpx;
+}
+.gradual-bg .product-name image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 10rpx;
+    position: relative;
+    top: 5rpx;
+}
+.gradual-bg .text {
+    margin-bottom: 35rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+.gradual-bg .num {
+    margin-bottom: 45rpx;
+    text-align: center;
+    font-size: 60rpx;
+}
+.gradual-bg .text.small {
+     margin-bottom: 0;
+    font-size: 26rpx;
+}
+
+.product-info {
+    background: #fff;
+    padding: 15rpx 40rpx;
+}
+.product-info .row {
+    display: flex;
+    padding: 15rpx 0;
+}
+.product-info .row text {
+    width: 140rpx;
+    color: #999;
+}
+.product-info .row > view {
+    flex: 1;
+}
+.product-info .row > view > view {
+    text-align: left;
+    display: inline-block;
+}
+.product-info .row .tag {
+    background: #ecf0f3;
+    border-radius: 5rpx;
+    line-height: 150%;
+    display: inline-block;
+    padding: 0 10rpx;
+    position: relative;
+    top: -5rpx;
+    color: #a3acb5;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+
+.product-describe {
+    background: #fff;
+    padding: 20rpx 40rpx 100rpx;
+}
+.product-describe .title {
+    margin-bottom: 15rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.product-describe .title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 1rpx;
+}
+.product-describe .p {
+    line-height: 150%;
+    margin-bottom: 25rpx;
+    color: #999;
+}
+.product-describe .p .a {
+    color: #3aa8ff;
+    text-decoration: underline;
+}
+
+.fixed-btn {
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+
+.am-list-extra {
+  position: relative;
+  overflow: visible;
+}
+.am-list-arrow {
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/dOfSJfWQvYdvsZiJStvg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.5;
+  height: 20px;
+  width: 20px;
+  padding-left: 10px;
+}
+.upload {
+  height: 20px;
+  width: 20px;
+  padding-left: 10px;
+  position: absolute;
+  right: -40px;
+  top: 7px;
+  z-index: 99;
+}
+
+
+.file-list .item {
+   padding: 10rpx 0;
+}
+.file-list .item text {
+    background: #00a0e9;
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 22rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 0 10rpx;
+    margin-right: 10rpx;
+}
+.file-list-1 {
+    background: #fff;
+    padding: 10rpx 25rpx;
+    border-bottom: rgb(248, 248, 248) solid 1rpx;
+}
+.file-list-1 .a {
+    padding: 7rpx 0;
+    display: flex;
+    color: #3aa8ff;
+    text-decoration: underline;
+}
+.file-list-1 .a .file-name {
+    flex: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

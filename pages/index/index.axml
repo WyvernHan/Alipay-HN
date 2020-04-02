@@ -1,0 +1,206 @@
+<view>
+  <view>
+      <swiper 
+        class="demo-swiper"
+        indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}"
+        vertical="{{vertical}}"
+        interval="{{interval}}"
+        circular="{{circular}}"
+      >
+        <swiper-item a:for="{{bannerList}}">
+          <image style="height:300rpx;width:100%" src="{{item.showImageUrl}}" mode="scaleToFill" />
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+
+  <view class="overview">
+    <view class="row">
+      <view class="item">
+        <view class="text">
+          <view>
+            注册企业（家）
+          </view>
+          <view class="num">
+            {{companynums==null?0:companynums}}
+          </view>
+
+        </view>
+        <image mode="scaleToFill" src="../../image/index-icon-1.png"/>
+      </view>
+
+      <view class="item">
+        <view class="text">
+          <view>
+            融资需求（项）
+          </view>
+          <view class="num">
+            {{xqnums==null?0:xqnums}}
+          </view>
+        </view>
+        <image mode="scaleToFill" src="../../image/index-icon-2.png"/>
+      </view>
+    </view>
+
+    <view class="row">
+      <view class="item">
+        <view class="text">
+          <view>
+            解决需求（项）
+          </view>
+          <view class="num">
+            {{complateNums==null?0:complateNums}}
+          </view>
+        </view>
+        <image mode="scaleToFill" src="../../image/index-icon-3.png"/>
+      </view>
+
+      <view class="item">
+        <view class="text">
+          <view>
+            授信总额（万元）
+          </view>
+          <view class="num">
+            {{sxSumMoney==''?0:sxSumMoney}}
+          </view>
+        </view>
+        <image mode="scaleToFill" src="../../image/index-icon-4.png"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="service">
+    <view class="title">
+      <text></text> 融资服务
+    </view>
+    <view class="service-box">
+      <form onSubmit="onSubmit" onReset="onReset">
+        <view class="blue">
+          <view class="input-item">
+           <input-item data-field="quota" name="quota" clear="{{true}}" value="{{quota}}" onInput="moneyValue" className="" placeholder="贷款金额(万元)">
+              贷款金额：
+            </input-item>
+          </view>
+          <view class="input-item">
+            <input-item data-field="quota" name="termValue" value="{{termValue}}" onInput="termValue" className="" placeholder="贷款期限">
+              贷款期限：
+            </input-item>
+            <picker-item data-field="termUnit" name="termUnit" placeholder="请选择" value="{{termUnit}}" onPickerTap="onPickerTap">
+              
+            </picker-item>
+          </view>
+          <view class="check-item">
+            <text>担保方式：</text>
+            <checkbox-group onChange="onChange" name="guaranteeType">
+              <label a:for="{{guaranteeType}}" class="checkbox" key="label-{{index}}">
+                <checkbox value="{{item.value}},{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}" data-item-key="{{item.value}}" onChange="getGuaranteeType" />
+                <text>{{item.name}}</text><!-- onChange="getGuaranteeType" -->
+              </label>
+            </checkbox-group>
+          </view>
+          <button size="default" type="primary" formType="submit">融资申请</button>
+        </view>
+      </form>
+      <view class="white">
+        <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+          <block a:for="{{fiancingsxdt}}">
+            <swiper-item>
+              <view class="row">
+                <view class="tag red">融资授信</view>
+                <view class="text">{{item.pmessage}}</view>
+                <view class="time">{{item.ptime}}</view>
+              </view>
+            </swiper-item>
+          </block>
+          
+          <block style="height:500rpx" a:for="{{fiancingDTList}}">
+            <swiper-item>
+              <view class="row">
+                <view class="tag green">融资申请</view>
+                <view class="swiper_item">{{item.pmessage}}</view>
+                <view class="time">{{item.ptime}}</view>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+        <!--<view class="row" a:for="{{fiancingsxdt}}">
+          <view class="tag red">融资授信</view>
+          <view class="text">{{item.pmessage}}</view>
+          <view class="time">{{item.ptime}}</view>
+        </view>
+        <view class="row" a:for="{{fiancingDTList}}">
+          <view class="tag green">融资申请</view>
+          <view class="text">{{item.pmessage}}</view>
+          <view class="time">{{item.ptime}}</view>
+        </view>-->
+      </view>
+    </view>
+  </view>
+  <view class="hot">
+    <view class="title">
+      <text></text> 热门推荐
+    </view>
+
+    <view class="hot-box">
+      <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" vertical="{{vertical}}" 
+      interval="{{interval}}" circular="{{circular}}" duration="{{duration}}">
+        <swiper-item class='back center' a:for="{{organlist}}">
+          <image style="height:250rpx;width:100%;" src="{{item.logoUrl}}" 
+          mode="scaleToFill" onTap="organDetail" data-hi="{{item}}" data-list="{{organlist}}" data-index="{{index}}" />
+        </swiper-item>
+      </swiper>
+      <!--<scroll-view scroll-x="{{true}}" class="scroll">
+        <image mode="scaleToFill" src="" style=""/>
+        <image mode="scaleToFill" src=""/>
+        <image mode="scaleToFill" src=""/>
+        <image mode="scaleToFill" src=""/>
+      </scroll-view>-->
+      <view class="items">
+        <view class="item"  a:for="{{productList}}" data-hi="{{item}}" data-hi2="1" onTap="productDetail">
+          <view class="top">
+            <view class="img">
+              <image mode="scaleToFill" src="{{item.picurl}}"/>
+            </view>
+            <view>
+              <view class="name">
+                <text a:if="{{item.financingPurpose.length > 6}}">{{item.financingPurpose.substring(0,6)}}...</text>
+                <text a:else>{{item.financingPurpose}}</text>
+              </view>
+              <view class="num">
+                {{item.raterangeMin}}-{{item.raterangeMax}}%/年
+              </view>
+            </view>
+          </view>
+          <view class="bottom">
+            <view>
+              担保方式：<text a:for="{{item.guaranteeModeList}}" a:for-item="itemg" a:for-index="indexg" >{{itemg.name}}<text a:if="{{(indexg+1)<item.guaranteeModeList.length}}">、</text></text>
+            </view>
+            <view>
+              贷款期限：{{item.termValueMin}}-{{item.termValueMax}}
+              <text a:if="{{item.termUnit==1}}">年</text>
+              <text a:if="{{item.termUnit==2}}">月</text>
+              <text a:if="{{item.termUnit==3}}">日</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <modal show="{{modalOpenedIndex}}" buttons="{{buttonsIndex}}" onModalClick="onModalClickIndex" onButtonClick="onButtonClickIndex" advice="{{true}}" onModalClose="onModalCloseIndex" topImage="">
+		<view class="popup">
+			<image class="pop-img" src="../../image/pop-img.png"/>
+      <view class="header">身份核验</view>
+		  <view class="p">
+      请去完成身份核验，
+      </view>
+      <view class="p">
+        核验通过后可进行融资！
+      </view>
+      <view class="button" onTap="goToPerfect">
+        去完善
+      </view>
+    </view>
+    
+	</modal>
+</view>

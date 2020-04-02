@@ -1,0 +1,122 @@
+
+
+<popup show="{{filterShow}}" position="top" onClose="onPopupClose" zIndex="999">
+ <view class="box">
+<list>
+  <view style="width:100%;overflow:hidden">
+        融资期限：
+   </view>
+ 
+  <view class="am-filter-list" style="min-height:0px" >
+      <view class="am-filter-item-wrap" style="min-width: initial;" a:for="{{dkqx_items}}" >
+          <view class="am-filter-item am-filter-click" a:if="{{item.selected}}"  onTap="handleCallBackOne" data-id="{{item.id}}">
+                {{item.value}}
+          </view>
+          <view class="am-filter-item" a:if="{{item.selected==false}}"  onTap="handleCallBackOne" data-id="{{item.id}}">
+                {{item.value}}
+          </view>
+      </view>
+  </view>
+
+
+   <view style="width:100%;overflow:hidden">
+        融资额度：
+   </view>
+
+   <view class="am-filter-list" style="min-height:0px" >
+      <view class="am-filter-item-wrap " a:for="{{dked_items}}" >
+          <view class="am-filter-item am-filter-click" a:if="{{item.selected}}"  onTap="handleCallBackTwo" data-id="{{item.id}}">
+                {{item.value}}
+          </view>
+          <view class="am-filter-item" a:if="{{item.selected==false}}"  onTap="handleCallBackTwo" data-id="{{item.id}}">
+                {{item.value}}
+          </view>
+      </view>
+  </view>
+    <view  style="width:100%;overflow:hidden">
+        担保方式：
+   </view>
+   <view class="am-filter-list" style="min-height:0px">
+      <view class="am-filter-item-wrap " a:for="{{dbfs_items}}" >
+          <view class="am-filter-item am-filter-click" a:if="{{item.selected}}"  onTap="handleCallBackThree" data-id="{{item.id}}">
+                {{item.value}}
+          </view>
+          <view class="am-filter-item" a:if="{{item.selected==false}}"  onTap="handleCallBackThree" data-id="{{item.id}}">
+                {{item.value}}
+          </view>
+      </view>
+  </view>
+
+   <view  style="width:100%;overflow:hidden" >
+        利率范围：
+   </view>
+   <view class="input" style="display:flex; align-items:center;">
+     <input-item type="text" clear="{{false}}"   className="dadada" controlled="{{true}}"    onInput="mininput"   placeholder="请输入" value="{{rateSmall}}"></input-item>
+        -
+      <input-item type="text" clear="{{false}}"  className="dadada" controlled="{{true}}"   onInput="maxinput"   placeholder="请输入" value="{{rateBig}}"></input-item>
+    
+   </view>
+</list>
+</view>
+</popup>
+
+<view style="width:100%; overflow: hidden">
+  
+
+  <view class="top-filter">
+    <view class="search">
+      <text class=" fa fa-search"></text>
+      <input
+        class="search-input"
+        placeholder="请输入产品名称"
+        value="{{search}}"
+        onConfirm="doneSearch"
+        onInput="handleSearch"
+      />
+    </view>
+
+    <view class="filter-icon fa fa-filter" onTap="toggleFilter">
+      
+    </view>
+
+    
+  </view>
+  <scroll-view class="tags" scroll-x="{{true}}">
+      <tag class="tag" size="lg" iconType="qr" ghost="{{ghost}}"  a:for="{{selectChild}}"> {{item.title}} 
+           <text onTap="delSelect" data-t="{{item.type}}">×</text>
+      </tag>
+  </scroll-view>
+  
+  
+
+
+  <scroll-view class="product-list" scroll-y="{{true}}" onScrollToLower="scrollMytrip">
+    <view a:for="{{list}}"  class="product-item">
+      <view class="product-img" data-hi="{{item}}" data-hi2="1" onTap="gotoDetail">
+        <image mode="scaleToFill" src="{{item.picurl}}"/>
+      </view>
+
+      <view class="product-info">
+        <view class="product-name" data-hi="{{item}}" data-hi2="1" onTap="gotoDetail">
+          {{item.financingPurpose}}-{{item.etpsName}}
+        </view>
+        <view class="product-rate" data-hi="{{item}}" data-hi2="1" onTap="gotoDetail">
+          利率范围（%/年）：{{item.raterangeMinStr}} - {{item.raterangeMaxStr}}
+        </view>
+        <view class="product-text" data-hi="{{item}}" data-hi2="1" onTap="gotoDetail">
+          贷款额度（万元）：{{item.quotaMinStr}} - {{item.quotaMaxStr}}
+        </view>
+        <view class="product-text" data-hi="{{item}}" data-hi2="1" onTap="gotoDetail">
+          担保方式：
+            <text a:for="{{item.guaranteeModeList}}" class="tag">{{item.name}}</text>
+            <!--<text class="tag">抵押</text>-->
+        </view>
+        <view class="product-btn">
+          <button size="mini" onTap="gotoDetailQuery" data-hi="{{item}}"  >查看</button>
+          <button style="margin-left: 10px;" type="primary" size="mini" data-hi="{{item}}" data-hi2="1" onTap="gotoDetail">申请</button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+

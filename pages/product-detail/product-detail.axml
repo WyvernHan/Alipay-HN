@@ -1,0 +1,92 @@
+<view>
+  <view class="product-overview">
+    <view class="gradual-bg">
+
+       <view class="product-name">
+         <image mode="scaleToFill" src="{{picurl}}"/>
+        <text>{{etpsName}}·{{financingPurpose}}</text>
+      </view>
+
+      <view class="text">
+        参考利率范围 (%/年)
+      </view>
+      <view class="num">
+       {{raterangeMinStr}}-{{raterangeMaxStr}}
+      </view>
+      <view class="text small">
+          融资额度：{{quotaMinStr}}-{{quotaMaxStr}}（万元） | 融资期限: {{termValueMin}}-{{termValueMax}}{{termUnitName}}
+      </view>
+
+      
+    </view>
+
+    <view class="product-info">
+       <view class="row">
+        <text>产品类别</text>
+         <view>
+          <view class="tag">
+             {{financingName1}}<block a:if="{{financingName2.length>0}}">-{{financingName2}}</block><block a:if="{{financingName3.length>0}}">-{{financingName3}}</block>
+          </view> 
+        </view>
+      </view>
+
+      <view class="row">
+        <text>担保方式</text>
+        <view>
+            <view class="tag" a:for="{{guaranteeModeList}}" >
+              {{item.name}}
+            </view>
+        </view>
+        
+      </view>
+
+
+      <view class="row">
+        <text>适用客户</text>
+        <view >
+          <view class="tag" a:for="{{enterpriseTypeName}}" >
+            {{item}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <view class="product-describe">
+    <view class="title">
+      <text></text>产品特点
+    </view>
+    <view class="p">
+      {{productCharacteristic}}
+    </view>
+
+    <view class="title">
+      <text></text> 产品描述
+    </view>
+    <view class="p">
+      {{productDescribe}}
+    </view>
+
+    <view class="title">
+      <text></text> 所需企业资料
+    </view>
+    <view class="p" a:for="{{auditsName}}" >
+      <view>
+        《{{item}}》<view a:if="{{(index+1)<auditsName.length}}"></view>
+      </view>
+      <!--
+      <view class="a">
+        经营快贷一期审核资料.doc
+      </view>
+      <view class="a">
+        经营快贷一期审核表.xls
+      </view>
+      -->
+    </view>
+  </view>
+</view>
+<!--<button type="primary">占位用</button>
+-->
+
+<button a:if="{{isSq==1}}" type="primary" class="fixed-btn" onTap="gotoApply">立即申请</button>

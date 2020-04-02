@@ -1,0 +1,62 @@
+<view class="forget-other">
+  <list>
+    <view slot="header">
+      找回方式二
+    </view>
+    <input-item
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="企业名"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+    >
+      企业名
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
+    </input-item>
+    <input-item
+      data-field="name"
+      placeholder="统一社会信用代码"
+      type="text"
+      value="{{name}}"
+      clear="{{true}}"
+      onInput="onItemInput"
+      onClear="onClear"
+    >
+      统一社会信用代码
+    </input-item>
+
+    <input-item
+      data-field="name"
+      placeholder="法人姓名"
+      type="text"
+      value="{{name}}"
+      clear="{{true}}"
+      onInput="onItemInput"
+      onClear="onClear"
+    >
+      法人姓名
+    </input-item>
+
+    <input-item
+      data-field="name"
+      placeholder="法人身份证号"
+      type="text"
+      value="{{name}}"
+      clear="{{true}}"
+      onInput="onItemInput"
+      onClear="onClear"
+    >
+      法人身份证号
+    </input-item>
+    
+    
+  </list>
+  <view style="margin: 10px;">
+    <button type="primary" onTap="onAutoFocus">下一步</button>
+  </view>
+</view>

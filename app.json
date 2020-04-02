@@ -1,0 +1,89 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/identity/identity",
+    "pages/register/register",
+    "pages/Original-password/Original-password",
+    "pages/phone-password/phone-password",
+    "pages/change-password/change-password",
+    "pages/finance/finance",
+    "pages/policy/policy",
+    "pages/location/location",
+    "pages/index/loanServe/loanServe",
+    "pages/apply-success/apply-success",
+    "pages/apply/apply",
+    "pages/web-view/web-view",
+    "pages/loan-progress/loan-progress",
+    "pages/product-detail/product-detail",
+    "pages/filter/filter",
+    "pages/mine/mine",
+    "pages/demand-detail/demand-detail",
+    "pages/news-detail/news-detail",
+    "pages/financing-list-filtered/financing-list-filtered",
+    "pages/news-list/news-list",
+    "pages/new-info/new-info",
+    "pages/financing/financing-list",
+    "pages/change-info/change-info",
+    "pages/change-phone/change-phone",
+    "pages/set/set",
+    "pages/set-password/set-password",
+    "pages/forget-other/forget-other",
+    "pages/forget-phone/forget-phone",
+    "pages/forget-password/forget-password",
+    "pages/register-success/register-success",
+    "pages/evaluate/evaluate",
+    "pages/organ-list/organ-list",
+    "pages/organ-list/OrganDetail/OrganDetail",
+    "pages/financing-need/financing-need",
+    "pages/enterprise-info/enterprise-info",
+    "pages/enterprise-update/enterprise-update",
+    "pages/notice/notice",
+    "pages/registerWord/registerWord",
+    "pages/registerPrivacy/registerPrivacy",
+    "pages/news-detail/newWebDetail/newWebDetail"
+  ],
+  "window": {
+    "defaultTitle": "海南自贸港金融服务平台"
+  },
+  "networkTimeout": {
+    "request": 15000
+  },
+  "tabBar": {
+    "textColor": "#515151",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#efefef",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "/image/icon/home.png",
+        "activeIcon": "/image/icon/home-cur.png"
+      },
+      {
+        "pagePath": "pages/organ-list/organ-list",
+        "name": "金融机构",
+        "icon": "/image/icon/organ.png",
+        "activeIcon": "/image/icon/organ-cur.png"
+      },
+      {
+        "pagePath": "pages/financing/financing-list",
+        "name": "金融产品",
+        "icon": "/image/icon/financing.png",
+        "activeIcon": "/image/icon/financing-cur.png"
+      },
+      {
+        "pagePath": "pages/news-list/news-list",
+        "name": "资讯中心",
+        "icon": "/image/icon/news.png",
+        "activeIcon": "/image/icon/news-cur.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "name": "我的",
+        "icon": "/image/icon/mine.png",
+        "activeIcon": "/image/icon/mine-cur.png"
+      }
+    ]
+  }
+}

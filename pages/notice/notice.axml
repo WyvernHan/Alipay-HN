@@ -1,0 +1,25 @@
+<view>
+  <scroll-view class="product-list" scroll-y="{{true}}" onScrollToLower="scrollMytrip">
+    <view class="product-item" a:for="{{list}}">
+      <view class="product-img">
+        <image mode="scaleToFill" src="../../image/mail-icon.png"/>
+        <!--<text>{{item.messageCodeStr}}</text>-->
+      </view>
+      <!--<view class="product-img open">
+        <text class="fa fa-envelope-open"></text>
+        <text>{{item.messageCodeStr}}</text>
+      </view>-->
+
+      <view class="product-info">
+        <view style="display:flex;">
+          <view class="product-name">{{item.typeStr}}</view>
+          <view>{{item.sendTimeStr}}</view>
+        </view>
+        
+        <view>
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

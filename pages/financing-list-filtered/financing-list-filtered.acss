@@ -1,0 +1,144 @@
+.top-filter {
+    background: #fff;
+    border-bottom: #e9e9e9 solid 1rpx;
+    padding: 20rpx 40rpx;
+    display: flex;
+}
+.top-filter .search {
+    background: #fafafa;
+    border-radius: 30rpx;
+    height: 60rpx;
+    flex: 1;
+    display: flex;
+    padding: 0 20rpx;
+    font-size: 36rpx;
+}
+.top-filter .search text {
+     height: 60rpx;
+     line-height: 60rpx;
+     vertical-align: middle;
+     color: #d4d4d4;
+}
+.top-filter .search input {
+    background: none;
+    height: 60rpx;
+    line-height: 60rpx;
+    vertical-align: middle;
+}
+.top-filter .filter-icon {
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #48a5f5;
+    text-align: right;
+    font-size: 36rpx;
+}
+
+
+.product-list {
+    padding: 0 40rpx 0;
+    height: calc(100vh - 190rpx);
+    overflow: auto;
+}
+.product-item {
+    background: #fff;
+    border-radius: 10rpx;
+    display: flex;
+    margin-bottom: 30rpx;
+    padding: 30rpx 30rpx 20rpx;
+}
+.product-item .product-img {
+    border: #e9e9e9 solid 1rpx;
+    width: 20vw;
+    height: 20vw;
+    margin-right: 30rpx;
+}
+.product-item .product-img image {
+    width: 20vw;
+    height: 20vw;
+}
+.product-item .product-info {
+    flex: 1;
+}
+.product-item .product-info .product-name {
+    margin-bottom: 10rpx;
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.product-item .product-info .product-rate {
+    margin-bottom: 25rpx;
+    font-size: 32rpx;
+    color: #ff9d11;
+}
+.product-item .product-info .product-text {
+    margin-bottom: 20rpx;
+    color: #8c8c8c;   
+}
+.product-item .product-info .product-text .tag {
+    background: #edf0f5;
+    border-radius: 5rpx;
+    margin: 0 5rpx;
+    padding: 5rpx 8rpx;
+    color: #a2acb6;
+}
+.product-item .product-info .product-btn button {
+    /*font-size: 26rpx;*/
+}
+
+.conditions {
+    padding: 20rpx 40rpx;
+    white-space: nowrap;
+}
+.conditions .tag {
+    background: #fff;
+    border-radius: 25rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    margin-right: 20rpx;
+    padding: 0 30rpx;
+    display: inline-block;
+    color: #8c8c8c;
+}
+.conditions .tag .fa.before {
+    margin-right: 10rpx;
+    color: #2594ff;
+}
+
+.conditions .tag  .fa-times {
+    position: relative;
+    right: -10rpx;
+    color: #d9d9d9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+<view class="evaluate">
+  <view class="title">
+    <text></text>
+    机构评价
+  </view>
+
+  <view class="page-section">
+    <form onSubmit="bindFormSubmit">
+      <view class="page-section-demo">
+        <textarea name="textarea" placeholder="Please input something"  />
+      </view>
+      <view class="page-section-btns">
+        <button form-type="submit" size="mini" type="primary">提交</button>
+      </view>  
+    </form>
+  </view>
+</view>

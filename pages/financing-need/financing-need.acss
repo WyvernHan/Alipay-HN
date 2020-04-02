@@ -1,0 +1,185 @@
+.top-filter {
+    background: #fff;
+    border-bottom: #e9e9e9 solid 1rpx;
+    padding: 20rpx 20rpx;
+    display: flex;
+    align-items: center;
+}
+.top-filter .search {
+    background: #fafafa;
+    border-radius: 30rpx;
+    height: 60rpx;
+    flex: 1;
+    display: flex;
+    padding: 0 20rpx;
+    font-size: 36rpx;
+}
+.am-search {
+    flex:1
+}
+.top-filter .search text {
+     height: 60rpx;
+     line-height: 60rpx;
+     vertical-align: middle;
+     color: #d4d4d4;
+}
+.top-filter .search input {
+    background: none;
+    height: 60rpx;
+    line-height: 60rpx;
+    vertical-align: middle;
+}
+.top-filter .filter-icon {
+    width: 60rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    color: #48a5f5;
+    text-align: right;
+    font-size: 36rpx;
+    position: relative;
+    right: 30rpx;
+}
+.btn-container {
+    background: #fff;
+    border-bottom: #eee solid 1rpx;
+    text-align: right;
+    padding: 20rpx 40rpx;
+}
+
+.btn-container .filter {
+    border: none;
+    color: #40a8ff;
+}
+.extra {
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/dOfSJfWQvYdvsZiJStvg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.2;
+  height: 20px;
+  width: 20px;
+  padding-left: 10px;
+}
+.fa-calendar {
+    color: #999;
+    font-size:32rpx; 
+}
+
+.box {
+   background-color: #fff;
+   padding-bottom: 20rpx;
+}
+.box::after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+.box button {
+    font-size: 26rpx;
+    height: 20
+}
+.box button {
+    font-size: 26rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    width: 25%;
+    float: right
+}
+
+.title {
+    margin-bottom: 15rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.title::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+.title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 3rpx;
+    z-index: 0;
+}
+.title .more {
+    color: #2a9aff;
+    float: right;
+    font-size: 24rpx;
+    margin-top: 5rpx;
+}
+.product-list {
+    padding: 30rpx 40rpx 0;
+    height: calc(100vh - 140rpx);
+    overflow: auto;
+}
+.item {
+    background: #fff;
+    border: #ccc solid 1rpx;
+    border-radius: 10rpx;
+    position: relative;
+    display: flex;
+    padding: 0 20rpx 0 160rpx;
+    overflow: hidden;
+    text-align: left;
+    font-size: 24rpx;
+    align-items: center;
+    margin-bottom: 25rpx;
+}
+.item .sub {
+    background: #000;
+    position: absolute;
+    width: 200rpx;
+    height: 150rpx;
+    line-height: 240rpx;
+    transform: rotate(-45deg);
+    top: -55rpx;
+    left: -80rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 22rpx;
+}
+.item .sub.blue {
+    background: linear-gradient(-70deg, #2597ff, #67c8ff);
+}
+.item .sub.red {
+    background: linear-gradient(-70deg, #fb9945, #fe8747);
+}
+.item .text {
+    flex: 1;
+    line-height: 150%;
+    padding: 20rpx 0;
+}
+
+.item .btn {
+    border-radius: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 30rpx;
+    font-size: 26rpx;
+    background: #deeefb;
+    color: #45a8f9;
+}
+
+.item .btn.red {
+    background: #ffbdb7;
+    color: #fd6d61;
+}
+.item .btn.green {
+    background: #dcf6f3;
+    color: #16c3b0;
+}
+.item .btn.blue {
+    background: #deeefb;
+    color: #45a8f9;
+}
+.item .btn.orange {
+    background: #fef3e1;
+    color: #ff930d;
+}

@@ -1,0 +1,49 @@
+.evaluate {
+    background: #fff;
+}
+.title {
+    border-bottom: #e8e8e8 solid 1rpx;
+    padding: 20rpx 40rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 1rpx;
+}
+
+.page-section {
+    padding: 20rpx 40rpx;
+}
+.page-section-btns {
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

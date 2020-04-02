@@ -1,0 +1,80 @@
+<view class="bg-fff">
+  <view class="gradual-bg">
+    <view class="name">
+      XXX银行YYYY分行
+    </view>
+  </view>
+
+  <view class="progress-box">
+    <view class="item">
+      <view class="icon cur">
+        <text class="fa fa-tasks"></text>
+      </view>
+      <view class="text">
+        受理
+      </view>
+    </view>
+    <view class="fa fa-angle-right">
+      
+    </view>
+
+    <view class="item">
+      <view class="icon">
+        <text class="fa fa-gavel"></text>
+      </view>
+      <view class="text">
+        审核
+      </view>
+    </view>
+    <view class="fa fa-angle-right">
+      
+    </view>
+
+    <view class="item">
+      <view class="icon">
+        <text class="fa fa-bookmark"></text>
+      </view>
+      <view class="text">
+        受信
+      </view>
+    </view>
+    <view class="fa fa-angle-right">
+      
+    </view>
+
+    <view class="item">
+      <view class="icon">
+        <text class="fa fa-money"></text>
+      </view>
+      <view class="text">
+        放款
+      </view>
+    </view>
+  </view>
+
+  <view class="info-box">
+    <view class="title">
+      <text></text> 审核信息
+    </view>
+    <view class="row">
+      <text>企业名称</text>
+      <view>
+          XXXXX有限公司
+      </view>
+    </view>
+
+    <view class="row">
+      <text>处理时间</text>
+      <view>
+          质押
+      </view>
+    </view>
+
+    <view class="row">
+      <text>经办行</text>
+      <view>
+          XXXX银行YYYY分行
+      </view>
+    </view>
+</view>
+</view>

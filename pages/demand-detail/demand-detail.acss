@@ -1,0 +1,274 @@
+.enterprise-info {
+    background: #fff;
+    border-bottom: #eee solid 1rpx;
+    display: flex;
+    padding: 20rpx 40rpx;
+    margin-bottom: 20rpx;
+}
+.enterprise-info .avatar {
+    border-radius: 50%;
+    height: 100rpx;
+    width: 100rpx;
+    margin-right: 20rpx;
+}
+.enterprise-info .avatar image {
+    height: 100rpx;
+    width: 100rpx;
+}
+.enterprise-info .info {
+    padding: 15rpx 0; 
+}
+.enterprise-info .info .name {
+    margin-bottom: 10rpx;
+    font-size: 28rpx; 
+}
+.enterprise-info .info .code {
+     font-size: 22rpx; 
+}
+
+.box {
+    background: #fff;
+    border-top: #eee solid 1rpx;
+    border-bottom: #eee solid 1rpx;
+    margin-bottom: 20rpx;
+    padding: 20rpx 40rpx;
+}
+.box .title {
+    border-bottom: #ccc dashed 1rpx;
+    display: flex;
+    margin-bottom: 20rpx;
+    padding: 0 0 20rpx;
+    align-items: center;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+.box .sub-title {
+    border-bottom: #ccc dashed 1rpx;
+    display: flex;
+    margin-bottom: 20rpx;
+    padding: 0 0 20rpx 64rpx;
+    align-items: center;
+    font-size: 22rpx;
+    font-weight: bold;
+    color:#666;
+}
+.box .title .icon {
+    background: linear-gradient(#397afd, #39a8fd);
+    border-radius: 10rpx;
+    width: 44rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    margin-right: 20rpx;
+    text-align: center;
+    font-size: 26rpx;
+}
+.box .title .icon .fa {
+    color: #fff;
+}
+.box .title .text {
+    flex: 1;
+}
+.box .title .sub {
+    color: #666;
+    font-size: 22rpx;
+}
+
+.box  .flex-list {
+    display: flex;
+    padding: 20rpx 0;
+    align-items: center;
+}
+.box  .flex-list .item {
+    flex: 1;
+    text-align: center;
+}
+.box  .flex-list .item .val {
+    margin-bottom: 20rpx;
+    font-size: 30rpx;
+    line-height: 30rpx;
+    white-space: nowrap;
+}
+.box .flex-list .item .val.blue {
+    color: #4d7ff4;
+}
+.box .flex-list .item .val.date {
+    font-size: 26rpx;
+}
+.box  .flex-list .item .key {
+    font-size: 22rpx;
+    white-space: nowrap;
+}
+.box  .flex-list .item .val text {
+    background: #1c92c7;
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 22rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 0 10rpx;
+}
+.box .file {
+    margin-top: 20rpx;
+    border-top: #ccc dashed 1rpx;
+    border-bottom: #ccc dashed 1rpx;
+    padding: 20rpx 0;
+}
+.box .file .sub-title {
+    margin-bottom: 15rpx;
+    font-weight: bold;
+    font-size: 28rpx;
+    padding-left: 0;
+}
+.box .file .file-list {
+    
+}
+.box .file .file-list .item {
+   padding: 10rpx 0;
+}
+.box .file .file-list .item text {
+    background: #00a0e9;
+    border-radius: 15rpx;
+    color: #fff;
+    font-size: 22rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    padding: 0 10rpx;
+    margin-right: 10rpx;
+}
+.box .score {
+    padding-top: 20rpx;
+}
+.box .score .sub-title {
+    margin-bottom: 15rpx;
+    font-weight: bold;
+    font-size: 28rpx;
+}
+.box .table {
+    padding: 0 0 0;
+    margin-top: -20rpx;
+}
+.box .table .table-list {
+    
+}
+.box .table .table-list .item {
+    padding: 20rpx 0;
+    border-bottom: #eee solid 1rpx;
+    display: flex;
+    align-items:center;
+}
+.box .table .table-list .item view {
+    flex: 1;
+    white-space:nowrap;
+}
+.box .table .table-list .item text {
+    padding: 0 10rpx;
+    color: #666;
+}
+.box .table .table-list .item .blue {
+    color: #00a0e9;
+}
+.box .evaluate {
+
+}
+.box .table .table-list .item {
+   
+}
+.box .evaluate .item {
+    padding: 20rpx 0;
+    border-bottom: #eee solid 1rpx;
+    display: flex;
+    align-items:center;
+}
+.box .evaluate .fa {
+    color: #dddddd;
+    font-size: 60rpx;
+    margin-right: 15rpx;
+}
+.box .evaluate .light {
+    color: #ffc010;
+}
+.box .evaluate textarea {
+    border: #ccc solid 1rpx;
+    padding: 10rpx;  
+    color: #000;
+    height: 120rpx;
+    margin-top: 20rpx;
+    font-size: 26rpx;
+}
+.box .evaluate::after {
+    display: block;
+    content: " ";
+    clear: both;
+}
+.box .evaluate button {
+    font-size: 26rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 25%;
+    float: right
+}
+
+.box .ul {
+    margin-top: -10rpx;
+}
+.box .ul .li {
+    border-bottom: #ccc dashed 1rpx;
+    padding: 10rpx 0;
+}
+.box .ul .li.head {
+    background: #f6f6f6;
+}
+.box .ul .li .row {
+    display: flex;
+    flex:1;
+    padding: 10rpx 0;
+}
+.box .ul .li .row > view {
+    flex:1;
+}
+.box .ul .li .row > text {
+    color:rgb(102, 102, 102);
+}
+
+.a {
+    color: #3aa8ff;
+    text-decoration: underline;
+    text-indent: 0;
+}
+
+.extra {
+  background-image: url('https://gw.alipayobjects.com/zos/rmsportal/dOfSJfWQvYdvsZiJStvg.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+  opacity: 0.2;
+  height: 20px;
+  width: 20px;
+  padding-left: 10px;
+}
+
+.file-list {
+
+}
+.file-list .a {
+    padding: 7rpx 0;
+    display: flex;
+}
+.file-list .a .file-name {
+    flex: 1;
+}
+.file-list .a .del {
+    
+}
+.am-input-item  {
+    padding-left: 0;
+}
+.tex {
+    border-bottom: #ccc dashed 1rpx;
+    font-size:0.22rem;
+    line-height:150%;
+    text-align: justify;
+    margin-bottom: 15rpx;
+    padding-bottom: 15rpx;
+    border-bottom: #bababa dashed 1rpx;
+}

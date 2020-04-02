@@ -1,0 +1,21 @@
+{
+  "name": "input-item",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mini-ali-ui": "^1.0.2",
+    "mini-antui": "^0.4.35",
+    "mini-html-parser2": "^0.1.4"
+  },
+  "tnpm": {
+    "mode": "yarn",
+    "lockfile": "enable"
+  },
+  "devDependencies": {}
+}

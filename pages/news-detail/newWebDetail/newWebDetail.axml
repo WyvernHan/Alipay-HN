@@ -1,0 +1,5 @@
+<view>
+ <!-- <web-view src="{{url}}" >-->
+  <web-view src="https://ds.alipay.com/?scheme=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FappId%3D20000067%26url%3Dhttps%253A%252F%252Frender.alipay.com%252Fp%252Fh5%252FindividualProdsSet%252FbusinessCertificate.html%253Ftrace%253Dtrue%2526__webview_options__%253Dapplet%25253Dfalse%2526scm%253D1.bkcdp.2020011700010100000030083737._._._._%2526chInfo%253DOUTER_YINGXIAO_HAINANJINRONGFW" >
+  </web-view>
+</view>

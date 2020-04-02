@@ -1,0 +1,302 @@
+.bold {
+    font-weight: bold;
+    text-align: left;
+    text-indent: 2em;
+    margin-bottom: 20rpx;
+}
+.p {
+    text-indent: 2em;
+    text-align: left;
+    margin-bottom: 20rpx;
+}
+
+.tab-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx;
+  /* 如果 swipeable="{{true}}"，需要增加 height */
+  /* height: 350px; */
+}
+
+.page-section {
+  width: 100%;
+}
+.swiper-item{
+  display: block;
+  height: 300rpx;
+  background-color:#e0ffff;
+}
+.margin-t {
+  margin-top: 24px;
+}
+
+
+.news-list {
+  height: calc(100vh - 400rpx);
+  padding: 0px 30rpx;
+}
+
+.policy-list {
+  height: calc(100vh - 100rpx);
+  padding: 0px 30rpx;
+}
+.news-item {
+  border-bottom: #ccc solid 1rpx;
+  padding: 30rpx 0;
+}
+.news-item .news-title {
+  margin-bottom: 25rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.news-item .news-outline {
+  display: flex;
+}
+.news-item .news-outline .news-content {
+  line-height: 150%;
+  padding: 0;
+}
+.news-item .news-outline .news-content .text {
+  color: #666;
+  font-size: 27rpx;
+  text-align: left;
+  padding: 0;
+  width: 100%;
+  word-break: break-all;
+}
+.news-item .news-outline .news-content .date {
+  color: #999;
+}
+.news-item .news-outline .img {
+  background: #ccc;
+  width: 240rpx;
+  height: 145rpx;
+  margin-left: 20rpx;
+}
+.news-item .news-outline .img image {
+  width: 240rpx;
+  height: 145rpx;
+}
+
+
+
+.tab-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40rpx;
+  /* 如果 swipeable="{{true}}"，需要增加 height */
+  /* height: 350px; */
+}
+
+.page-section {
+  width: 100%;
+}
+.swiper-item{
+  display: block;
+  height: 300rpx;
+  background-color:#e0ffff;
+}
+.margin-t {
+  margin-top: 24px;
+}
+
+
+.news-list {
+  height: calc(100vh - 400rpx);
+  padding: 0px 30rpx;
+}
+.news-item {
+  border-bottom: #ccc solid 1rpx;
+  padding: 30rpx 0;
+
+}
+.news-item .news-title {
+  margin-bottom: 25rpx;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+.news-item .news-outline {
+  display: flex;
+}
+.news-item .news-outline .news-content {
+  line-height: 150%;
+  flex: 1;
+}
+.news-item .news-outline .news-content .text {
+  color: #666;
+  font-size: 27rpx;
+  text-align: justify;
+}
+.news-item .news-outline .news-content .date {
+  color: #999;
+}
+.news-item .news-outline .img {
+  background: #ccc;
+  width: 240rpx;
+  height: 145rpx;
+  margin-left: 20rpx;
+}
+.news-item .news-outline .img image {
+  width: 240rpx;
+  height: 145rpx;
+}
+
+
+.news-header {
+    background: #fff;
+    border-bottom: #e8e8e8 solid 1rpx;
+    padding: 20rpx 40rpx;
+}
+.news-header .news-title {
+    font-size: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-weight: bold;
+    text-align: center;
+}
+.news-header .news-source {
+    color: #999;
+}
+
+.news-content {
+    background: #fff;
+    padding: 20rpx 40rpx;
+    color: #666;
+}
+.news-content .p {
+    line-height: 150%;
+    margin-bottom: 20rpx;
+    text-indent: 2em;
+    text-align: justify;
+}
+.news-content .center {
+    margin-bottom: 20rpx;
+    text-align: center;
+    text-indent: 0;
+}
+.news-content .img {
+    margin-bottom: 15rpx;
+}
+.news-content .img image {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

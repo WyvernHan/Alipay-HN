@@ -1,0 +1,136 @@
+.product-overview {
+    margin-bottom: 20rpx;
+}
+.gradual-bg {
+    background: linear-gradient(130deg, #40a8ff, #4b7ef3, #4763dd);
+    /*height: 300rpx;*/
+    padding: 20rpx 20rpx 25rpx;
+    color: #fff;
+}
+.gradual-bg .product-name {
+    margin-bottom: 45rpx;
+    display: flex;
+}
+.gradual-bg .product-name image {
+    width: 80rpx;
+    height: 80rpx;
+    margin-right: 10rpx;
+    position: relative;
+    top: 5rpx;
+    background: #dedede;
+}
+.gradual-bg .product-name text {
+    flex: 1;
+}
+.gradual-bg .text {
+    margin-bottom: 35rpx;
+    text-align: center;
+    font-size: 30rpx;
+}
+.gradual-bg .num {
+    margin-bottom: 45rpx;
+    text-align: center;
+    font-size: 60rpx;
+}
+.gradual-bg .text.small {
+     margin-bottom: 0;
+    font-size: 26rpx;
+}
+
+.product-info {
+    background: #fff;
+    padding: 15rpx 40rpx;
+}
+.product-info .row {
+    display: flex;
+    padding: 15rpx 0;
+}
+.product-info .row text {
+    width: 140rpx;
+    color: #999;
+}
+.product-info .row > view {
+    flex: 1;
+}
+.product-info .row > view > view {
+    text-align: left;
+    display: inline-block;
+}
+.product-info .row .tag {
+    background: #ecf0f3;
+    border-radius: 5rpx;
+    line-height: 150%;
+    display: inline-block;
+    padding: 0 10rpx;
+    position: relative;
+    top: -5rpx;
+    color: #a3acb5;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+
+.product-describe {
+    background: #fff;
+    padding: 20rpx 40rpx 100rpx;
+}
+.product-describe .title {
+    margin-bottom: 15rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.product-describe .title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 1rpx;
+}
+.product-describe .p {
+    line-height: 150%;
+    margin-bottom: 25rpx;
+    color: #999;
+}
+.product-describe .p .a {
+    color: #3aa8ff;
+    text-decoration: underline;
+}
+
+.fixed-btn {
+    
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

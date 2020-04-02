@@ -1,0 +1,49 @@
+<view>
+  <view style="margin-top: 10px;" />
+  <list>
+    <input-item value="{{tel}}" disabled="disabled">法人代表电话号</input-item>
+    
+    <input-item type="text" name="loginName" onInput="onItemInputLoginName" controlled="{{true}}" value="{{loginName}}" placeholder="请输入企业名称" onBlur="onItemBlurLoginName">企业名称</input-item>
+
+    <input-item type="text" name="license" onInput="onItemInputLicense" controlled="{{true}}" value="{{license}}" placeholder="请输入统一社会信用代码" onBlur="onItemBlurLicense">统一社会信用代码</input-item>
+
+    <picker-item data-field="companyType" name="companyType" value="{{companyType}}"  placeholder="请选择企业类型" maxlength="2" onPickerTap="onPickerTap">企业类型</picker-item>
+
+    <input-item type="text" name="corporate" onInput="onItemInputCorporate" controlled="{{true}}" value="{{corporate}}" placeholder="请输入法人代表">法人代表</input-item>
+
+    <input-item type="idcard" name="corporateIDcard" onInput="onItemInputIdCard"  controlled="{{true}}" value="{{corporateIDcard}}" placeholder="请输入法人代表身份证号" onBlur="onItemBlurIdCard">法人代表身份证号</input-item>
+    
+    <list-item arrow="true" className="list">
+      <text>营业执照</text>
+      <view slot="extra" class="upload" onTap="uploadLicenseFiles"></view>
+    </list-item>
+    <view class="file-list-1">
+      <view class="a" onTap="saveLicenseImage" a:for="{{licenseFileslist}}" a:for-item="licenseitem">
+        <text class="file-name">{{licenseitem.substring(licenseitem.lastIndexOf("/")+1,licenseitem.length)}}</text>
+      </view>
+    </view>
+
+    <list-item arrow="true" className="list">
+      <text>法人身份证</text>
+      <view slot="extra" class="tips-idcard">（请将您的身份证正、反面放在一张图片内上传）</view>
+      <view slot="extra" class="upload" onTap="uploadIdCardFiles"></view>
+    </list-item>
+    <view class="file-list-1">
+        <view class="a" onTap="saveIdCardImage" a:for="{{idCardFileslist}}" a:for-item="idCarditem">
+          <text class="file-name">{{idCarditem.substring(idCarditem.lastIndexOf("/")+1,idCarditem.length)}}</text>
+        </view>
+    </view>
+
+    <input-item value="{{checkState}}" disabled="disabled">资料审核结果</input-item>
+
+    <input-item value="手机人脸审核" disabled="disabled" a:if="{{checkOrigin=='1'}}">审核来源</input-item>
+    <input-item value="PC运营审核" disabled="disabled" a:else>审核来源</input-item>
+
+    <view class="tips">
+      <text>提示</text>：提交后将会进入审核阶段，审核通过前无法进行融资！！
+    </view>
+  </list>
+  <view style="margin: 10px;">
+    <button type="primary" onTap="onSubmit">提交</button>
+  </view>
+</view>

@@ -1,0 +1,85 @@
+<popup show="{{showTop}}" position="top" onClose="onPopupClose" zIndex="999">
+  <view class="box">
+    <list>
+      <input-item placeholder="请输入产品归属机构" value="{{orgName}}" onBlur="handleSearch">
+          产品归属机构
+      </input-item>
+      <view onTap="datePickerStart" >
+        <input-item placeholder="申请开始日期" disabled value="{{startCreated}}" onInput="onItemInputStart" onBlur="onItemBlurStart">
+          申请开始日期
+          <view slot="extra" class="fa fa-calendar"></view>
+        </input-item>
+      </view>
+      <view onTap="datePickerEnd" >
+        <input-item placeholder="申请结束日期" disabled value="{{endCreated}}" onInput="onItemInputEnd" onBlur="onItemBlurEnd">
+        申请结束日期
+        <view slot="extra" class="fa fa-calendar"></view>
+      </input-item>
+      </view>
+      
+    </list>
+    <view style="margin: 10px;">
+      <button type="primary" style="display:block;" onTap="onSubmit">筛选</button>
+      <button type="default" style="display:block;margin-right:10px;" onTap="clearAll">重置</button>
+    </view>
+  </view>
+</popup>
+
+<view>
+  <!--<view class="top-filter">
+    <view class="search">
+      <text class="fa fa-search"></text>
+      <input class="search-input" placeholder="请输入产品归属机构" value="{{orgName}}" onBlur="handleSearch"/>
+    </view>
+  </view>-->
+  <view class="top-filter">
+    <search-bar value="{{orgName}}" focus="{{false}}" disabled="{{false}}" placeholder="请输入产品归属机构" onInput="handleInput" onClear="handleClear" onCancel="handleCancel" onSubmit="onSearch" showCancelButton="{{false}}" />
+  
+    <view class="filter-icon fa fa-filter" onTap="onTopBtnTap"></view>
+  </view>
+  <scroll-view class="product-list" scroll-y="{{true}}" onScrollToLower="scrollMytrip">
+        <view class="item" a:for="{{listProductApply}}" onTap="applyDetail" data-applyid="{{item.id}}">
+          <view class="sub blue" a:if="{{item.paType == 1}}">
+            非定向申请
+          </view>
+          <view class="sub red" a:if="{{item.paType == 2}}">
+            定向申请
+          </view>
+          <view class="text">
+            <view>
+              融资金额（万元）：<text>{{item.applyQuotaStr}}</text>
+            </view>
+            <view>
+              融资期限：<text>{{item.applyTermValue}}{{item.applyTermUnitStr}}</text>
+            </view>
+            <view>
+              融资利率（%/年）：<text>{{item.applyRaterangeStr}}</text>
+            </view>
+            <view a:if="{{item.financingPurpose==''}}">
+              产品名称：
+              <text>无</text>
+            </view>
+            <view a:else>
+              产品名称：
+              <text a:if="{{item.financingPurpose.length > 6}}">{{item.financingPurpose.substring(0,6)}}...</text>
+              <text a:else>{{item.financingPurpose}}</text>
+            </view>
+            <view>
+              产品归属机构：
+              <text a:if="{{item.orgName.length > 6}}">{{item.orgName.substring(0,6)}}...</text>
+              <text a:else>{{item.orgName}}</text>
+            </view>
+            <view>
+              申请时间：<text>{{item.createdTimeStr}}</text>
+            </view>
+            <view>
+              合作进度：<text>{{item.paStatusStr}}</text>
+            </view>
+          </view>
+          <view class="btn green" a:if="{{item.paStatus==3}}">补充材料</view>
+          <view class="btn orange" a:elif="{{item.paStatus==18}}">评价</view>
+          <view class="btn blue" a:else>查看</view>
+        </view>
+
+  </scroll-view>
+</view>

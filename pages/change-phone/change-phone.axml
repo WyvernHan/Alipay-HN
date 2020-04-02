@@ -1,0 +1,72 @@
+<view class="forget-phone">
+  <list>
+    <view slot="header">
+      更改手机号
+    </view>
+    <input-item
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="133****1477"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+      disabled
+    >
+      原手机号
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
+    </input-item>
+
+    <input-item
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="登录密码"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+
+    >
+      登录密码
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
+    </input-item>
+
+    <input-item
+      clear="{{true}}"
+      value="{{cardNo}}"
+      className="dadada"
+      placeholder="新手机号"
+      focus="{{inputFocus}}"
+      onInput="onItemInput"
+      onFocus="onItemFocus"
+      onBlur="onItemBlur"
+      onConfirm="onItemConfirm"
+      onClear="onClear"
+    >
+      新手机号
+      <view slot="extra" class="extra" onTap="onExtraTap"></view>
+    </input-item>
+    <input-item
+      data-field="name"
+      placeholder="验证码"
+      type="text"
+      value="{{name}}"
+      clear="{{true}}"
+      onInput="onItemInput"
+      onClear="onClear"
+    >
+      验证码
+      <button size="mini" type="primary" class="code">获取验证码</button>
+    </input-item>
+    
+  </list>
+  <view style="margin: 10px;">
+    <button type="primary" onTap="onAutoFocus">确认更改</button>
+  </view>
+</view>

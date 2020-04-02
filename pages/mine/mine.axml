@@ -1,0 +1,283 @@
+<view class="mine">
+  <view class="user-wrap">
+    <view class="relative">
+      <view class="info">
+        <view class="name">
+          <title type="more" onActionTap="titleMore" style="padding:0px;margin:0px;">
+            <text style="color:#fff">{{userenterpriseInfo.loginName.substring(0,15)}}</text>
+          </title>
+        </view>
+        
+        <view class="code">
+          统一社会信用代码：{{userenterpriseInfo.license}}
+        </view>
+        <view class="introduction">
+          
+          <collapse collapseKey="collapse-introduction">
+            <collapse-item titleClass="titleline" header="简介：{{userenterpriseInfo.introduction.substring(0,25)}}..." itemKey="item-introduction" collapseKey="collapse-introduction">
+              <view class="item-content content1">
+                <view>
+                  {{userenterpriseInfo.introduction}}
+                </view>
+              </view>
+            </collapse-item>
+          </collapse>
+          <!--<text a:if="{{userenterpriseInfo.introduction.length > 60}}">{{userenterpriseInfo.introduction.substring(0,60)}}...</text>
+          <text a:else>{{userenterpriseInfo.introduction}}</text>-->
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="statistics">
+    <view class="row">
+      <view class="item blue">
+        <view class="icon">
+          <image mode="scaleToFill" src="../../image/mine-icon-1.png"/>
+        </view>
+        <view class="text">
+          <view class="num">
+            {{productApply.applyQuotaStr}}
+          </view>
+          <view>
+            <view>申请额度</view>
+            <text>(万元)</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="item blue">
+        <view class="icon">
+          <image mode="scaleToFill" src="../../image/mine-icon-2.png"/>
+        </view>
+        <view class="text">
+          <view class="num">
+            {{productApply.moneyStr}}
+          </view>
+          <view>
+            <view>
+              达成额度
+            </view>
+            <text>(万元)</text>
+          </view>
+          
+        </view>
+      </view>
+
+      <view class="item blue">
+        <view class="icon">
+          <image mode="scaleToFill" src="../../image/mine-icon-3.png"/>
+        </view>
+        <view class="text">
+          <view class="num">
+            {{productApply.quotaMaxStr}}
+          </view>
+          <view>
+            <view>
+              待还款总额
+            </view>
+            <text>(万元)</text>
+          </view>
+          
+        </view>
+      </view>
+    </view>
+
+    <view class="row">
+      <view class="item orange">
+        <view class="icon">
+          <image mode="scaleToFill" src="../../image/mine-icon-4.png"/>
+        </view>
+        <view class="text">
+          <view class="num">
+            {{productApply.applyTermUnit}}
+          </view>
+          <view>
+            <view>
+              申请次数
+            </view>
+            <text></text>
+          </view>
+          
+        </view>
+      </view>
+
+      <view class="item orange">
+        <view class="icon">
+          <image mode="scaleToFill" src="../../image/mine-icon-5.png"/>
+        </view>
+        <view class="text">
+          <view class="num">
+            {{productApply.applyTermValue}}
+          </view>
+          <view>
+            <view>
+              达成次数
+            </view>
+            <text></text>
+          </view>
+          
+        </view>
+      </view>
+
+      <view class="item orange">
+        <view class="icon">
+          <image mode="scaleToFill" src="../../image/mine-icon-6.png"/>
+        </view>
+        <view class="text">
+          <view class="num">
+            {{productApply.paType}}
+          </view>
+          <view>
+            <view>
+              在审申请个数
+            </view>
+            <text></text>
+          </view>
+          
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class="entrance-wrap">
+    <view class="row">
+      <view class="item" onTap="toxqsq">
+        <image mode="scaleToFill" src="../../image/entrance-img-1.png"/>
+        <view class="text">
+          融资申请
+        </view>
+      </view>
+
+      <view class="item" onTap="toxqfb">
+        <image mode="scaleToFill" src="../../image/entrance-img-2.png"/>
+        <view class="text">
+          需求发布
+        </view>
+      </view>
+
+      <view class="item" onTap="getEnterprise">
+        <image mode="scaleToFill" src="../../image/entrance-img-3.png"/>
+        <view class="text">企业信息管理</view>
+      </view>
+
+      <view class="item" onTap="getProductApply">
+        <image mode="scaleToFill" src="../../image/entrance-img-4.png"/>
+        <view class="text" >融资需求管理</view>
+      </view>
+
+      <view class="item" onTap="getNoticeList">
+        <image mode="scaleToFill" src="../../image/entrance-img-5.png"/>
+        <view class="text">
+          消息管理
+        </view>
+      </view>
+
+
+      <view class="item" onTap="toUPassword">
+
+        <image mode="scaleToFill" src="../../image/entrance-img-6.png"/>
+        <view class="text">
+          密码修改
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="credit-granting">
+    <view class="title">
+      <text></text> 授信列表
+      <!--<view class="more">
+        更多>>
+      </view>-->
+    </view>
+
+    <view class="list" a:for="{{listEnterpriseCreditInfo}}">
+
+      <view class="item">
+        <view class="name">
+          <text>{{item.bankcode}}</text>
+        </view>
+        <view class="row">
+          <view>
+            授信金额（万元）：{{item.creditMoneyStr}}     
+          </view>
+        </view>
+        <view class="row">
+          <view>
+            授信余额（万元）：{{item.creditBalanceStr}}
+          </view>
+        </view>
+        <view class="row">
+          <view>
+            开始时间：{{item.creditStartDateStr}}     
+          </view>
+        </view>
+        <view class="row">
+          <view>
+            结束时间：{{item.creditEndDateStr}}   
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="record">
+    <view class="title">
+      <text></text> 融资申请列表
+      <view class="more" onTap="getProductApply">
+        更多>>
+      </view>
+    </view>
+    <scroll-view class="list" scroll-y="{{true}}" onScrollToLower="scrollMytrip">
+      <view class="item" a:for="{{listProductApply}}" onTap="applyDetail" data-applyid="{{item.id}}">
+        <view class="sub blue" a:if="{{item.paType == 1}}">
+          非定向申请
+        </view>
+        <view class="sub red" a:if="{{item.paType == 2}}">
+          定向申请
+        </view>
+        <view class="text">
+          <view>
+            融资金额（万元）：<text>{{item.applyQuotaStr}}</text>
+          </view>
+          <view>
+            融资期限：<text>{{item.applyTermValue}}{{item.applyTermUnitStr}}</text>
+          </view>
+          <view>
+            担保方式：
+      <block a:if="{{item.paType == 1}}">
+            <text a:for="{{item.guaranteeModeList}}" a:for-item="itemg" a:for-index="indexg" >{{itemg.name}}<text a:if="{{(indexg+1)<item.guaranteeModeList.length}}">、</text></text>
+     </block>
+       <block a:if="{{item.paType == 2}}">
+           --
+     </block>
+          </view>
+          <view a:if="{{item.productName==''}}">
+            产品名称：
+            <text>无</text>
+          </view>
+          <view a:else>
+            产品名称：
+            <text a:if="{{item.productName.length > 6}}">{{item.productName.substring(0,6)}}...</text>
+            <text a:else>{{item.productName}}</text>
+          </view>
+          <view>
+            产品归属机构：
+            <text a:if="{{item.orgName.length > 6}}">{{item.orgName.substring(0,6)}}...</text>
+            <text a:else>{{item.orgName}}</text>
+          </view>
+          <view>
+            申请时间：<text>{{item.createdTimeStr}}</text>
+          </view>
+        </view>
+        <view class="btn">
+          <view class="btn green" a:if="{{item.paStatus==3}}">补充材料</view>
+          <view class="btn orange" a:elif="{{item.paStatus==18}}">评价</view>
+          <view class="btn blue" a:else>查看</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

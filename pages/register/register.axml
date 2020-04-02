@@ -1,0 +1,36 @@
+<view class="forget-phone">
+
+    <list>
+      <view slot="header">
+        注册账号
+      </view>
+      
+      <input-item type="text" name="nickName" onInput="onItemInputNickName" controlled="{{true}}" value="{{nickName}}" placeholder="请输入企业名称" onBlur="onItemBlurNickName">企业名称</input-item>
+
+      <input-item type="text" name="license" onInput="onItemInputLicense" controlled="{{true}}" value="{{license}}" placeholder="请输入统一社会信用代码" onBlur="onItemBlurLicense">统一社会信用代码</input-item>
+
+      <input-item type="text" name="corporate" onInput="onItemInputCorporate" placeholder="请输入法人代表姓名">法人代表姓名</input-item>
+
+      <input-item type="idcard" name="idCard" onInput="onItemInputIdCard" placeholder="请输入法人代表身份证号" onBlur="onItemBlurIdCard">法人代表身份证号</input-item>
+
+      <input-item type="password" password onInput="onItemInputPassword" name="password" value="{{password}}"  placeholder="登录密码" onBlur="onItemBlurPassword">登录密码</input-item>
+
+      <input-item type="password" password onInput="onItemInputNewPassword" name="newpassword" value="{{newPassword}}"  placeholder="确认密码" onBlur="onItemBlurNewPassword">确认密码</input-item>
+
+      <input-item type="text" onInput="onInputYzm" maxlength="4" placeholder="请输入图形验证码">
+        图形验证码
+        <image slot="extra" mode="scaleToFill" onTap="imageTap" style="height:60rpx;width:120rpx;" src="{{captchaImage}}"/>
+      </input-item>
+      
+    </list>
+    <view class="atd-mobile-code">
+      <mobile-code onSendCode="onSendCode" onCodeInput="onCodeInput" disabled="{{disabled}}" yzm="{{num}}" mobile="{{login}}"/>
+    </view>
+    <view style="margin: 10px;">
+      <button type="primary" disabled="{{(yzmCode && login) ? false : true}}" onTap="defaultTap">提交注册</button>
+    </view>
+
+  <view class="register-text">
+    提交即表示同意<text onTap="registerWord">《用户授权协议》</text><text onTap="registerPrivacy">《隐私政策》</text>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+{
+  "pullRefresh": true,
+  "usingComponents": {
+    "popup": "mini-antui/es/popup/index",
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index",
+    "input-item": "mini-antui/es/input-item/index",
+    "picker-item": "mini-antui/es/picker-item/index",
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index",
+    "filter": "mini-antui/es/filter/index",
+    "filter-item": "mini-antui/es/filter/filter-item/index",
+    "search-bar": "mini-ali-ui/es/search-bar/index"
+  }
+}

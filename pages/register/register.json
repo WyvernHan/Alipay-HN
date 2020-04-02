@@ -1,0 +1,11 @@
+{
+  "defaultTitle": "海南自贸港金融服务平台",
+  "usingComponents": {
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index",
+    "input-item": "mini-antui/es/input-item/index",
+    "picker-item": "mini-antui/es/picker-item/index",
+    "modal": "mini-antui/es/modal/index",
+    "mobile-code": "/components/mobileCode/index"
+  }
+}

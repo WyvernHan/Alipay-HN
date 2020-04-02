@@ -1,0 +1,80 @@
+.login-bg {
+    background: url(../../image/login-bg.jpg) no-repeat;
+    background-size:100% 100%; 
+    height: 100vh;
+    width: 100%;
+}
+.login-bg .title {
+    padding-top: 15vh;
+    margin-bottom: 8vh;
+    font-size: 46rpx;
+    text-align: center;
+}
+.form-box {
+    width: 75%;
+    margin: 0 auto 20rpx;
+}
+.form-box .form-item {
+    border-bottom: #ddd solid 1rpx;
+    padding: 10rpx 0;
+    margin-bottom: 40rpx;
+    display: flex;
+    align-items: center;
+}
+.form-box .form-item .fa {
+    font-size: 48rpx;
+    color: #bfbfbf;
+    position: relative;
+    top: -2rpx;
+}
+.form-box .form-item input {
+    font-size: 30rpx;
+    flex: 1;
+}
+.form-box .login-btn {
+    background: #3ca5ff;
+    border: #3ca5ff solid 1rpx;;
+    border-radius: 45rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    margin-top: 80rpx;
+}
+.login-text {
+    width: 70%;
+    margin: 0 auto 20rpx;
+    display: flex;
+    font-size: 28rpx;
+}
+.login-text .register {
+    flex: 1
+}
+.login-text .forget {
+    flex: 1
+}
+.login-text text {
+    color: #46a4ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

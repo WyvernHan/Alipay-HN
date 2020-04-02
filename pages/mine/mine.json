@@ -1,0 +1,10 @@
+{
+  "pullRefresh": true,
+   "usingComponents":{
+    "filter": "mini-antui/es/filter/index",
+    "filter-item": "mini-antui/es/filter/filter-item/index",
+    "title": "mini-ali-ui/es/title/index",
+    "collapse": "mini-ali-ui/es/collapse/index",
+    "collapse-item": "mini-ali-ui/es/collapse/collapse-item/index"
+  }
+}

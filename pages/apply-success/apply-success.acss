@@ -1,0 +1,21 @@
+.result-box {
+    background: #eee;
+    margin: 40rpx 40rpx 0;
+    padding: 20rpx 40rpx;
+    font-size: 30rpx;
+}
+
+.result-box > view {
+    padding: 25rpx 0;
+}
+
+
+
+
+
+
+
+
+
+
+

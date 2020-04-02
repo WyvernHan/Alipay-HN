@@ -1,0 +1,351 @@
+.mine {
+    background: #fff;
+    min-height: 100vh;
+}
+.am-title  {
+    padding: 0;
+}
+.user-wrap {
+    background: linear-gradient(-45deg, #2f4fef, #3892ee);
+    position: relative;
+    overflow: hidden;
+    padding: 40rpx 60rpx 200rpx;
+}
+.user-wrap::after {
+    background: #fff;
+    display: block;
+    content: " ";
+    height: 300rpx;
+    width: 200%;
+    position: absolute;
+    bottom: -180rpx;
+    left: -100rpx;
+    transform: rotate(-8deg);
+}
+.user-wrap .relative {
+    position: relative;
+    z-index: 40;
+}
+.user-wrap .avatar {
+    background: #fff;
+    border-radius: 50%;
+    width: 120rpx;
+    height: 120rpx;
+    float: left;
+    margin-right: 40rpx;
+}
+.user-wrap .avatar image {
+    border-radius: 50%;
+    width: 120rpx;
+    height: 120rpx;
+}
+.user-wrap .info {
+    line-height: 120%;
+    padding: 15rpx 0;
+    color: #fff;
+}
+.user-wrap .info .name {
+    margin-bottom: 20rpx;
+    font-size: 40rpx;
+}
+.user-wrap .info .code {
+    font-size: 22rpx;
+    margin-bottom: 20rpx;
+}
+.user-wrap .info .introduction {
+    font-size: 22rpx;
+}
+.am-collapse-item-title-text-wrapper {
+    color: #fff;
+}
+.item-content {
+  padding: 0;
+  font-size: 17px;
+  color: #fff;
+  line-height: 24px;
+}
+
+.content1 {
+  height: 300rpx;
+}
+
+
+.statistics {
+    background: #fff;
+    border-radius: 15rpx;
+    box-shadow: 0 8rpx 8rpx rgba(0, 0, 0, 0.2);
+    width: calc(100% - 80rpx);
+    margin: auto;
+    margin-top: -200rpx;
+    padding: 6rpx;
+    position: relative;
+    z-index: 9999;
+}
+
+.statistics .row {
+    display: flex;
+}
+.statistics .row::after {
+    content:  " ";
+    display: block;
+    clear: both;
+}
+.statistics .row .item {
+    display: flex;
+    margin: 6rpx;
+    padding: 20rpx 6rpx;
+    align-items: center;
+    flex:1;
+}
+.statistics .row .item.blue {
+    background: linear-gradient(-70deg, #2597ff, #67c8ff);
+}
+.statistics .row .item.red {
+    background: linear-gradient(-70deg, #f64235, #fa584f);
+}
+.statistics .row .item.orange {
+    background: linear-gradient(-70deg, #fb9945, #fe8747);
+}
+.statistics .row .item .icon {
+    width: 30rpx;
+    height: 45rpx;
+    margin-right: 5rpx;
+}
+.statistics .row .item .icon image {
+    width: 30rpx;
+    height: 45rpx;
+}
+.statistics .row .item .text {
+    color: #fff;
+    font-size: 18rpx;
+    white-space: nowrap;
+}
+.statistics .row .item .text > view {
+    white-space: nowrap;
+    display: flex;
+    white-space: nowrap;
+}
+.statistics .row .item .text text {
+     font-size: 16rpx;
+     white-space: nowrap;
+}
+.statistics .row .item .num {
+    margin-top: 5rpx;
+    font-size: 28rpx;
+    white-space: nowrap;
+}
+
+.entrance-wrap {
+    padding: 60rpx 40rpx 0;
+}
+.entrance-wrap .row {
+    
+}
+.entrance-wrap .row::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+.entrance-wrap .row .item {
+    width: 33.33%;
+    float: left;
+    margin-bottom: 30rpx;
+    position: relative;
+    text-align: center;
+}
+
+.entrance-wrap .row .item image {
+    margin-bottom: 10rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+.entrance-wrap .row .item .text {
+    font-size: 24rpx;
+}
+.entrance-wrap .row .item .hot {
+    background: #ff3347;
+    border-radius: 10rpx;
+    height: 20rpx;
+    line-height: 20rpx;
+    position: absolute;
+    padding: 2rpx 10rpx;
+    color: #fff;
+    top: -10rpx;
+    right: -10rpx;
+}
+
+.title {
+    margin-bottom: 15rpx;
+    font-size: 30rpx;
+    line-height: 1;
+    font-weight: bold;
+    color: #333;
+}
+.title::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+.title text {
+    background: #4b7ef3;
+    width: 5rpx;
+    height: 30rpx;
+    display: inline-block;
+    margin-right: 10rpx;
+    position: relative;
+    top: 3rpx;
+}
+.title .more {
+    color: #2a9aff;
+    float: right;
+    font-size: 24rpx;
+    margin-top: 5rpx;
+}
+
+.credit-granting {
+    padding:20rpx 40rpx 40rpx;
+}
+.credit-granting .list {
+    border: #ccc solid 1rpx;
+    border-radius: 20rpx;
+    margin-bottom: 20rpx;
+    overflow: hidden
+}
+.credit-granting .list .item {
+    border-bottom: #ccc solid 1rpx;
+    align-items: center;
+    line-height: 40rpx;
+    padding:  0;
+    font-size: 40;
+    margin-bottom: 10rpx;
+}
+.credit-granting .list .item:last-child {
+    border-bottom:none;
+}
+.credit-granting .list .item > view {
+    
+}
+.credit-granting .list .item .name {
+    border-bottom: #ccc dashed 1rpx;
+    background:#2597ff;
+    flex: 1;
+    color: #fff;
+    padding: 20rpx 20rpx 20rpx;
+    margin-bottom: 10rpx;
+}
+.credit-granting .list .item .name image {
+    background: #000;
+    height: 40rpx;
+    width: 40rpx;
+    vertical-align: middle;
+    margin-right: 8rpx;
+}
+.credit-granting .list .item .name text {
+    vertical-align: middle;
+}
+.credit-granting .list .item .row {
+    padding: 10rpx 20rpx;
+    display: flex;
+}
+.credit-granting .list .item .row > view {
+    flex:1;
+}
+
+.record {
+    padding: 0 40rpx;
+    
+}
+.record .title {
+    text-align: left;
+}
+.record .list {
+
+}
+.record .list .item {
+    border: #ccc solid 1rpx;
+    border-radius: 10rpx;
+    position: relative;
+    display: flex;
+    padding: 0 20rpx 0 160rpx;
+    overflow: hidden;
+    text-align: left;
+    font-size: 24rpx;
+    align-items: center;
+    margin-bottom: 25rpx;
+}
+.record .list .item .sub {
+    background: #000;
+    position: absolute;
+    width: 200rpx;
+    height: 150rpx;
+    line-height: 240rpx;
+    transform: rotate(-45deg);
+    top: -55rpx;
+    left: -80rpx;
+    text-align: center;
+    color: #fff;
+    font-size: 22rpx;
+}
+.record .list .item .sub.blue {
+    background: linear-gradient(-70deg, #2597ff, #67c8ff);
+}
+.record .list .item .sub.red {
+    background: linear-gradient(-70deg, #fb9945, #fe8747);
+}
+.record .list .item .text {
+    flex: 1;
+    line-height: 150%;
+    padding: 20rpx 0;
+    white-space: nowrap;
+}
+.record .list .item .text text {
+    white-space: nowrap;
+}
+.record .list .item .btn {
+    height: 60rpx;
+    font-size: 26rpx;
+    position: absolute;
+    right: 10rpx;
+    top: 50%;
+    margin-top: -30rpx;
+}
+.record .list .item .btn > view {
+    background: #deeefb;
+    color: #45a8f9;
+    border-radius: 30rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 30rpx;
+    white-space: nowrap;
+}
+.record .list .item .btn .red {
+    border: #fd6d61 solid 2rpx;
+    color: #fd6d61;
+}
+.record .list .item .btn .green {
+    background: #dcf6f3;
+    color: #16c3b0;
+}
+.record .list .item .btn .blue {
+    background: #deeefb;
+    color: #45a8f9;
+}
+.record .list .item .btn .orange {
+    background: #fef3e1;
+    color: #ff930d;
+}
+
+.am-collapse-item-title   {
+    padding: 0;
+    margin: 0;
+}
+
+.am-collapse,
+.am-collapse * {
+    background: none;
+    font-size: 22rpx;
+}
+.titleline::after {
+   border-bottom: none;
+   background: none;
+}

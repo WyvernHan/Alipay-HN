@@ -6,7 +6,7 @@
   <view class="form-box">
     <view class="form-item">
       <text class="fa fa-user"></text>
-      <input class="input" name="login" onBlur="onBlur" onInput="onInputLogin" placeholder="用户名" maxlength="11" />
+      <input class="input" name="login" onInput="onInputLogin" placeholder="用户名" maxlength="11" />
     </view>
     <view class="form-item">
       <text class="fa fa-unlock-alt"></text>

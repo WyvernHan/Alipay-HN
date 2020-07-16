@@ -60,6 +60,7 @@ Page({
         },
       });
     }else{
+      
       my.request({
         url: app.globalData.webServerUrl+'alipayRestController.do?method=alipayLogin',//获取首页信息
         method: 'POST',
@@ -73,6 +74,7 @@ Page({
         dataType: 'json',
         // 调用成功的回调函数
         success: function (res) {
+          console.info(res);
           if(res.data.code=='000000') {
             app.globalData.IsExist=1;//用户变为登录状态
             app.globalData.user=res.data.sessionLogin;//用户
@@ -90,9 +92,9 @@ Page({
               }
             });
             //测试,正式
-            /*my.reLaunch({
-              url: '../index/index'
-            });*/
+            // my.reLaunch({
+            //   url: '../index/index'
+            // });
             //开发
             my.switchTab({
               url: '../index/index'
@@ -124,6 +126,9 @@ Page({
     }
   },
   registerClick() {
+
+    
+
     my.navigateTo({
       url: '../register/register'
     });

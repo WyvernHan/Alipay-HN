@@ -77,7 +77,7 @@ Page({
 			method: 'POST',
 			data: {
         parammap:{
-              page :that.data.page,
+              // page :that.data.page,
               rateSmall:that.data.rateSmall,//输入框值
               rateBig:that.data.rateBig,//输入框值
               guaranteeType:that.data.guaranteeType,

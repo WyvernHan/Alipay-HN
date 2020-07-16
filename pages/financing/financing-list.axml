@@ -70,7 +70,6 @@
         class="search-input"
         placeholder="请输入产品名称"
         value="{{search}}"
-        onConfirm="doneSearch"
         onInput="handleSearch"
       />
     </view>

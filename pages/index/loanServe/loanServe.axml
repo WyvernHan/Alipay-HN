@@ -1,5 +1,5 @@
 <view>
-  <form onSubmit="onSubmit" onReset="onReset">
+  <form onSubmit="onSubmit" >
   <list>
     <input-item
       name="quota"
@@ -29,7 +29,7 @@
           担保方式
         </view> 
         <view class="am-picker-wrapper" style="height:auto;">
-          <checkbox-group onChange="onChange" name="guaranteeType">
+          <checkbox-group  name="guaranteeType">
             <label a:for="{{guaranteeType}}" class="checkbox" key="label-{{index}}">
               <checkbox value="{{item.value}},{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}" data-item-key="{{item.value}}" onChange="getGuaranteeType" />
               <text>{{item.name}}</text>

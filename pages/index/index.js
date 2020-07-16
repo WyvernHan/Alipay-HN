@@ -38,7 +38,6 @@ Page({
     interval: 2000,//自动切换时间间隔(ms)
     circular: true,//无限滑动
     duration: 1500,//滑动动画时长(ms)
-    guaranteeType: [],
     inputFocus: true,
     bank: '',
     showRectangle: true,
@@ -255,8 +254,6 @@ Page({
           complateNums:complateNums,
           //守信总金额
           sxSumMoney: sxSumMoney,
-          //融资申请动态
-          fiancingDTList:fiancingDTList,
           //授信动态
           fiancingsxdt:fiancingsxdt,
           //热门推荐

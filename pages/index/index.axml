@@ -75,7 +75,7 @@
       <text></text> 融资服务
     </view>
     <view class="service-box">
-      <form onSubmit="onSubmit" onReset="onReset">
+      <form onSubmit="onSubmit">
         <view class="blue">
           <view class="input-item">
            <input-item data-field="quota" name="quota" clear="{{true}}" value="{{quota}}" onInput="moneyValue" className="" placeholder="贷款金额(万元)">
@@ -92,7 +92,7 @@
           </view>
           <view class="check-item">
             <text>担保方式：</text>
-            <checkbox-group onChange="onChange" name="guaranteeType">
+            <checkbox-group  name="guaranteeType">
               <label a:for="{{guaranteeType}}" class="checkbox" key="label-{{index}}">
                 <checkbox value="{{item.value}},{{item.name}}" checked="{{item.checked}}" disabled="{{item.disabled}}" data-item-key="{{item.value}}" onChange="getGuaranteeType" />
                 <text>{{item.name}}</text><!-- onChange="getGuaranteeType" -->
@@ -187,7 +187,7 @@
       </view>
     </view>
   </view>
-  <modal show="{{modalOpenedIndex}}" buttons="{{buttonsIndex}}" onModalClick="onModalClickIndex" onButtonClick="onButtonClickIndex" advice="{{true}}" onModalClose="onModalCloseIndex" topImage="">
+  <modal show="{{modalOpenedIndex}}" buttons="{{buttonsIndex}}" onModalClick="onModalClickIndex" advice="{{true}}" onModalClose="onModalCloseIndex" topImage="">
 		<view class="popup">
 			<image class="pop-img" src="../../image/pop-img.png"/>
       <view class="header">身份核验</view>

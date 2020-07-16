@@ -1,0 +1,21 @@
+<view class="forget-phone">
+  <list>
+    <view slot="header">忘记密码</view>
+
+      <input-item type="password" password onInput="onItemInputPassword" name="password" value="{{password}}"  placeholder="新密码" onBlur="onItemBlurPassword">新密码</input-item>
+
+      <input-item type="password" password onInput="onItemInputNewPassword" name="newpassword" value="{{newPassword}}"  placeholder="确认密码" onBlur="onItemBlurNewPassword">确认密码</input-item>
+
+      <input-item type="text" onInput="onInputYzm" maxlength="4" placeholder="请输入图形验证码">
+        图形验证码
+        <image slot="extra" mode="scaleToFill" onTap="imageTap" style="height:60rpx;width:120rpx;" src="{{captchaImage}}"/>
+      </input-item>
+
+  </list>
+  <view class="atd-mobile-code">
+    <password-mobile onSendCode="onSendCode" onCodeInput="onCodeInput" disabled="{{disabled}}" yzm="{{num}}" mobile="{{login}}"/>
+  </view>
+  <view style="margin: 10px;">
+    <button type="primary" disabled="{{(yzmCode && login) ? false : true}}" onTap="defaultTap">提交</button>
+  </view>
+</view>

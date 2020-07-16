@@ -57,7 +57,10 @@ Page({
     }
     //正常机构流程
    console.info(this.data.applyCode);
-    this.data.ms="";
+    //this.data.ms="";
+    that.setData({ 
+            ms:""
+    });
      my.navigateTo({ 
                url: '../apply/apply?applyCode='+this.data.applyCode
      });

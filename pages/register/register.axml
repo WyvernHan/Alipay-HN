@@ -11,7 +11,7 @@
 
       <input-item type="text" name="corporate" onInput="onItemInputCorporate" placeholder="请输入法人代表姓名">法人代表姓名</input-item>
 
-      <input-item type="idcard" name="idCard" onInput="onItemInputIdCard" placeholder="请输入法人代表身份证号" onBlur="onItemBlurIdCard">法人代表身份证号</input-item>
+      <input-item type="idcard" name="idCard" onInput="onItemInputIdCard" placeholder="请输入法人代表身份证号" >法人代表身份证号</input-item>
 
       <input-item type="password" password onInput="onItemInputPassword" name="password" value="{{password}}"  placeholder="登录密码" onBlur="onItemBlurPassword">登录密码</input-item>
 

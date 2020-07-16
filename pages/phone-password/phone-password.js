@@ -31,15 +31,15 @@ Page({
       [e.target.dataset.field]: '',
     });
   },
-  onPickerTap() {
-    my.showActionSheet({
-      title: '选择发卡银行',
-      items: banks,
-      success: (res) => {
-        this.setData({
-          bank: banks[res.index],
-        });
-      },
-    });
-  },
+  // onPickerTap() {
+  //   my.showActionSheet({
+  //     title: '选择发卡银行',
+  //     items: banks,
+  //     success: (res) => {
+  //       this.setData({
+  //         bank: banks[res.index],
+  //       });
+  //     },
+  //   });
+  // },
 });

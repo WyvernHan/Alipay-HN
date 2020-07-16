@@ -7,7 +7,6 @@
         class="search-input"
         placeholder="请输入机构名称"
         value="{{search}}"
-        onConfirm="doneSearch"
         onInput="handleSearch"
       />
     </view>

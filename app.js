@@ -46,7 +46,7 @@ var that = this;
       scopes: 'auth_base',
       success: ({ authCode }) => {
         //console.log(authCode)
-        my.httpRequest({
+        my.request({
           url: this.globalData.webServerUrl+'alipayRestController.do?method=getAlipayUserId&code='+authCode,
            //url: 'http://www.wfios.com:9099/ycjf/alipayRestController.do?method=getAlipayUserIdFace&code='+authCode,
           method: '',
@@ -99,10 +99,14 @@ var that = this;
     verifyCode:'',
     blobTempContent:'',
     blobTempContentTwo:'',
-    //webServerUrl:'https://www.krdp2p.com:9095/hnpt/'//https网关演示地址
-    //webServerUrl:'https://www.krdp2p.com:9096/hnpt/'//https网关测试地址
+    webServerUrl:'https://www.krdp2p.com:9096/hnpt/',//https网关地址
+    //webServerUrl:'http://www.wfios.com:9299/hnpt/',//开发网关地址
     //webServerUrl:'http://www.wfios.com:9122/ycjf/'//开发网关地址
-    webServerUrl:'http://www.wfios.com:9083/hnpt/'//测试网关地址
+    //webServerUrl:'http://www.wfios.com:9083/hnpt/'//测试网关地址
+    //webServerUrl:'https://hnftpfinance.com/',
+    piTempObj:{},
+   
+  
    },
   onShow(options) {
     // 从后台被 scheme 重新打开

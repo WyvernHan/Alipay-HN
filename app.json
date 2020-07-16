@@ -8,8 +8,6 @@
     "pages/phone-password/phone-password",
     "pages/change-password/change-password",
     "pages/finance/finance",
-    "pages/policy/policy",
-    "pages/location/location",
     "pages/index/loanServe/loanServe",
     "pages/apply-success/apply-success",
     "pages/apply/apply",
@@ -20,19 +18,16 @@
     "pages/mine/mine",
     "pages/demand-detail/demand-detail",
     "pages/news-detail/news-detail",
-    "pages/financing-list-filtered/financing-list-filtered",
     "pages/news-list/news-list",
     "pages/new-info/new-info",
     "pages/financing/financing-list",
     "pages/change-info/change-info",
     "pages/change-phone/change-phone",
     "pages/set/set",
-    "pages/set-password/set-password",
     "pages/forget-other/forget-other",
     "pages/forget-phone/forget-phone",
     "pages/forget-password/forget-password",
     "pages/register-success/register-success",
-    "pages/evaluate/evaluate",
     "pages/organ-list/organ-list",
     "pages/organ-list/OrganDetail/OrganDetail",
     "pages/financing-need/financing-need",
@@ -41,7 +36,8 @@
     "pages/notice/notice",
     "pages/registerWord/registerWord",
     "pages/registerPrivacy/registerPrivacy",
-    "pages/news-detail/newWebDetail/newWebDetail"
+    "pages/news-detail/newWebDetail/newWebDetail",
+    "pages/forget-phone/forgetCheck/forgetCheck"
   ],
   "window": {
     "defaultTitle": "海南自贸港金融服务平台"

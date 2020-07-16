@@ -179,16 +179,19 @@ Component({
           // 调用成功的回调函数
           success: function (res) {
             if(res.data.code=='999999'){
-              my.alert({
-                content: res.data.message+'，请重新输入',
-              });
+                my.showLoading({
+                  content: res.data.message+'，请重新输入',
+                  delay: '1000',
+                });
+              // my.alert({
+              //   content: res.data.message+'，请重新输入',
+              // });
             } else if(res.data.code=='000000'){
               that.setData({
                 mobileValue: value,
                 canSend: true,
                 btnName: '发送验证码'
               });
-              console.info(that.data.mobileValue+','+that.data.canSend)
             }
           },
           fail: function (res) {
@@ -199,7 +202,7 @@ Component({
             setTimeout(() => {
               my.hideLoading();
               my.navigateTo({
-                url: '../register/register'
+                url: '/pages/register/register'
               });
             }, 5000);
           }

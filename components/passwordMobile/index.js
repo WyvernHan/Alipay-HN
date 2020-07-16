@@ -168,7 +168,7 @@ Component({
             my.showToast({
               type: 'success',
               title: '温馨提示',
-              content: '手机号:' + mobile+ ' -> 验证码发送失败',
+              content: '手机号: 验证码发送失败',
               duration: 2000,
               success: () => {
               }
@@ -276,9 +276,7 @@ Component({
     settimer() {
       let timer;
       let codeTime = this.props.codeTime;
-      const {
-        disabled
-      } = this.props;
+      const disabled= this.props;
       clearInterval(timer);
       timer = setInterval(() => {
         codeTime--;
@@ -305,14 +303,6 @@ Component({
     verifyTel(number) { // 手机号正则校验
       const reg = /^1[3|4|5|7|8|9]\d{9}$/;
       return reg.test(number);
-    },
-    onClearTime() {
-      this.setData({
-            btnName: '重新发送',
-            mobileDisabled: disabled ? true : false,
-            canSend: true,
-            txt: ''
-          });
-     }
+    }
   }
 });

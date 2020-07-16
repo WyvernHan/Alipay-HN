@@ -394,7 +394,7 @@ function validate(extension, name) {
       if (showdown.helper.isString(ext.regex)) {
         ext.regex = new RegExp(ext.regex, 'g');
       }
-      if (!ext.regex instanceof RegExp) {
+      if (ext.regex instanceof RegExp==false) {
         ret.valid = false;
         ret.error = baseMsg + '"regex" property must either be a string or a RegExp object, but ' + typeof ext.regex + ' given';
         return ret;
@@ -1349,7 +1349,7 @@ showdown.subParser('blockQuotes', function (text, options, globals) {
     bq = bq.replace(/(\s*<pre>[^\r]+?<\/pre>)/gm, function (wholeMatch, m1) {
       var pre = m1;
       // attacklab: hack around Konqueror 3.5.4 bug:
-      pre = pre.replace(/^  /mg, '~0');
+      pre = pre.replace(/^ /mg, '~0');
       pre = pre.replace(/~0/g, '');
       return pre;
     });
@@ -2260,7 +2260,7 @@ showdown.subParser('runExtension', function (ext, text, options, globals) {
   } else if (ext.regex) {
     // TODO remove this when old extension loading mechanism is deprecated
     var re = ext.regex;
-    if (!re instanceof RegExp) {
+    if (re instanceof RegExp==false) {
       re = new RegExp(re, 'g');
     }
     text = text.replace(re, ext.replace);

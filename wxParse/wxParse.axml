@@ -57,7 +57,7 @@
     <block a:if="{{item.tag == 'button'}}">
       <button type="default" size="mini">
         <block a:for="{{item.nodes}}" a:for-item="item" wx:key="">
-          <template is="wxParse1" data="{{item}}" />
+          <template is="wxParse0" data="{{item}}" />
         </block>
       </button>
     </block>
@@ -70,7 +70,7 @@
           </view>
           <view class="{{item.classStr}} wxParse-li-text">
             <block a:for="{{item.nodes}}" a:for-item="item" wx:key="">
-              <template is="wxParse1" data="{{item}}" />
+              <template is="wxParse0" data="{{item}}" />
             </block>
           </view>
         </view>
@@ -91,7 +91,7 @@
     <block a:elif="{{item.tag == 'a'}}">
       <view bindtap="wxParseTagATap" class="wxParse-inline {{item.classStr}} {{item.attr.href==undefined?'':'wxParse-'+item.tag}}" data-src="{{item.attr.href}}" style="{{item.styleStr}}">
         <block a:for="{{item.nodes}}" a:for-item="item" wx:key="">
-          <template is="wxParse1" data="{{item}}" />
+          <template is="wxParse0" data="{{item}}" />
         </block>
       </view>
     </block>
@@ -99,7 +99,7 @@
     <block a:elif="{{item.tag == 'table'}}">
       <view class="{{item.classStr}} wxParse-{{item.tag}}" style="{{item.styleStr}}">
         <block a:for="{{item.nodes}}" a:for-item="item" wx:key="">
-          <template is="wxParse1" data="{{item}}" />
+          <template is="wxParse0" data="{{item}}" />
         </block>
       </view>
     </block>
@@ -111,7 +111,7 @@
     <block a:elif="{{item.tagType == 'block'}}">
       <view class="{{item.classStr}} wxParse-{{item.tag}}" style="{{item.styleStr}}">
         <block a:for="{{item.nodes}}" a:for-item="item" wx:key="">
-          <template is="wxParse1" data="{{item}}" />
+          <template is="wxParse0" data="{{item}}" />
         </block>
       </view>
     </block>
@@ -119,7 +119,7 @@
     <!--内联标签-->
     <view a:else class="{{item.classStr}} wxParse-{{item.tag}} wxParse-{{item.tagType}}" style="{{item.styleStr}}">
       <block a:for="{{item.nodes}}" a:for-item="item" wx:key="">
-        <template is="wxParse1" data="{{item}}" />
+        <template is="wxParse0" data="{{item}}" />
       </block>
     </view>
 

@@ -78,25 +78,17 @@ Page({
             console.log('scrollMytrip执行异常:', e);
         }
     },
-    onPickerTap() {//选择贷款期限方法
-        my.showActionSheet({
-        title: '选择贷款期限',
-        items: loanUnit,
-        success: (res) => {
-            this.setData({
-            datedis: dates[res.index],
-            });
-        },
-        });
-    },
-    onStroryClick(id) {
-        const detailUrl = `https://news-at.zhihu.com/api/4/news/${id}`;
-        console.log('detailUrl = ' + detailUrl);
-        const params = encodeURIComponent(detailUrl);
-        my.navigateTo({
-            url: '../detail/detail?params=${params}'
-        });
-    },
+    // onPickerTap() {//选择贷款期限方法
+    //     my.showActionSheet({
+    //     title: '选择贷款期限',
+    //     items: loanUnit,
+    //     success: (res) => {
+    //         this.setData({
+    //         datedis: dates[res.index],
+    //         });
+    //     },
+    //     });
+    // },
     /**
      * 模拟请求服务端查询数据并渲染页面
      * @method mySchedulde

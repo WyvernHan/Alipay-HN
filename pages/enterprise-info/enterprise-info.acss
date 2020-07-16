@@ -12,7 +12,7 @@
   position: relative;
   overflow: visible;
 }
-input[disabled="disabled"] {
+input {
   color: #333;
 }
 .am-list-arrow {

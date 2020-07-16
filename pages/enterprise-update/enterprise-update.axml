@@ -3,15 +3,15 @@
   <list>
     <input-item value="{{tel}}" disabled="disabled">法人代表电话号</input-item>
     
-    <input-item type="text" name="loginName" onInput="onItemInputLoginName" controlled="{{true}}" value="{{loginName}}" placeholder="请输入企业名称" onBlur="onItemBlurLoginName">企业名称</input-item>
+    <input-item type="text" name="loginName" onInput="onItemInputLoginName" controlled="{{true}}" value="{{loginName}}" placeholder="请输入企业名称" >企业名称</input-item>
 
-    <input-item type="text" name="license" onInput="onItemInputLicense" controlled="{{true}}" value="{{license}}" placeholder="请输入统一社会信用代码" onBlur="onItemBlurLicense">统一社会信用代码</input-item>
+    <input-item type="text" name="license" onInput="onItemInputLicense" controlled="{{true}}" value="{{license}}" placeholder="请输入统一社会信用代码" >统一社会信用代码</input-item>
 
     <picker-item data-field="companyType" name="companyType" value="{{companyType}}"  placeholder="请选择企业类型" maxlength="2" onPickerTap="onPickerTap">企业类型</picker-item>
 
     <input-item type="text" name="corporate" onInput="onItemInputCorporate" controlled="{{true}}" value="{{corporate}}" placeholder="请输入法人代表">法人代表</input-item>
 
-    <input-item type="idcard" name="corporateIDcard" onInput="onItemInputIdCard"  controlled="{{true}}" value="{{corporateIDcard}}" placeholder="请输入法人代表身份证号" onBlur="onItemBlurIdCard">法人代表身份证号</input-item>
+    <input-item type="idcard" name="corporateIDcard" onInput="onItemInputIdCard"  controlled="{{true}}" value="{{corporateIDcard}}" placeholder="请输入法人代表身份证号" >法人代表身份证号</input-item>
     
     <list-item arrow="true" className="list">
       <text>营业执照</text>

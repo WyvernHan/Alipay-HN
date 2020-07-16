@@ -52,29 +52,30 @@ Page({
       [e.target.dataset.field]: '',
     });
   },
-  onPickerTap() {
-    my.showActionSheet({
-      title: '选择发卡银行',
-      items: banks,
-      success: (res) => {
-        this.setData({
-          bank: banks[res.index],
-        });
-      },
-    });
-  },
    onLoad(query) {
-    this.data=app.globalData.piTempObj;
+    const that=this;
+    that.setData({ 
+            ...app.globalData.piTempObj
+    });
+    //this.data=app.globalData.piTempObj;
     console.info("友商测试--------------------");
     console.info(this.data);
-    this.data.isdo=true;
-    this.data.applyCode = query.applyCode;
+
+    that.setData({ 
+           isdo:true,
+           applyCode:query.applyCode
+    });
+    // this.data.isdo=true;
+    // this.data.applyCode = query.applyCode;
     var fileObjList=[];
     for(var i in this.data.auditsName){
         var temObj={name:this.data.auditsName[i],ftype:this.data.audits[i],listUploadFileRecord:[]};
         fileObjList.push(temObj);
     }
-    this.data.fileObjList=fileObjList;
+    that.setData({ 
+           fileObjList:fileObjList
+    });
+    //this.data.fileObjList=fileObjList;
     console.info("this.data.applyCode==="+this.data.applyCode);
   },
   onPickerTap() {
@@ -90,20 +91,14 @@ Page({
   },
   onSubmit(e){
     const that = this;
-
-    
-
     //正常机构流程
     that.checkapplyForm(e);
     if(that.data.checkFormStatus=='ok'){
 
-    
-    console.info('88888888888888888888888');
       if(that.data.isdo){
       that.setData({
         isdo:false
       });
-       console.info('999999999999999999999-------------');
         my.showLoading({
           content: '请求中...',
           delay: 0,
@@ -131,8 +126,6 @@ Page({
                 console.info('picode==='+that.data.code+'/applyCode=='+that.data.applyCode);
                 console.info("定向附件集合imgfilepath===="+imgfilepath) 
                 console.info(that.data) ;
-              
-
                 my.request({
                   url: app.globalData.webServerUrl+'alipayRestController.do?method=checkApplyFile',
                   method: 'POST',

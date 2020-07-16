@@ -105,7 +105,8 @@ function onFace(goback) {
 
                             },
                             fail: function () {
-                            utils.showAlertModal('服务器异常', '请稍后认证！');
+                            // utils.showAlertModal('服务器异常', '请稍后认证！');
+                            my.alert({ content: '服务器异常请稍后认证！' });
                             }
                         });
                             return;
@@ -115,23 +116,13 @@ function onFace(goback) {
                             // 可做下 toast 弱提示
                         //  my.alert({ content: '用户主动退出' });
                             return;
-                        }else{
-                        checkfacenums++;
-                        //my.alert({ content: '状态码：'+verifyResult.resultStatus });
-                                if(checkfacenums==3){
-                                    checkfacenums = 0;
-                                //      my.navigateTo({
-                                //      url: '../enterprise-info/enterprise-info'
-                                // });
-                                    my.alert({ content: 'loginuser：'+ss });
-                                }
                         }
                         const errorCode = verifyResult.result && verifyResult.result.errorCode;
 
                         });
         },
         fail: function () {
-          utils.showAlertModal('人脸识别异常', '请重新识别');
+           my.alert({ content: '人脸识别异常,请重新识别' });
         }
       });
   }
@@ -140,4 +131,4 @@ function onFace(goback) {
 module.exports = {
   getVerify:getVerify,
   onFace:onFace
-};
+}

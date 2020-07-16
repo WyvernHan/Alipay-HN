@@ -62,7 +62,7 @@ function refreshAccessToken() {
   var refreshToken = my.getStorageSync({ key: 'refreshToken' }).data;
   if (refreshToken) {
     if (validateTokenTimestamp(refreshToken.expireTime)) {
-      my.httpRequest({
+      my.request({
         url: 'https://www.gdeiassistant.cn/rest/token/refresh',
         method: 'POST',
         data: {
@@ -128,7 +128,7 @@ function showReLaunchModal(title, content) {
     content: content,
     success: () => {
       my.reLaunch({
-        url: '../login/login'
+        url: '/pages/login/login'
       })
     }
   });
